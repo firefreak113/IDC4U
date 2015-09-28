@@ -1,0 +1,21 @@
+INDEX VERSION 1.127+G:\Programming\IDC4U\.metadata\.plugins\org.eclipse.jdt.core
+2657516944.index
+1872836646.index
+3824976845.index
+2929702158.index
+1582169844.index
+4141259751.index
+3436232276.index
+3979474686.index
+540843501.index
+450487476.index
+3138610814.index
+2537251511.index
+2577175673.index
+2212156733.index
+2170123481.index
+851935367.index
+901678145.index
+747794223.index
+905258816.index
+2392890799.index

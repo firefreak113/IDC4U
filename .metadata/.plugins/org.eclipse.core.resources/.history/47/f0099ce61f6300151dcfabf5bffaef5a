@@ -1,0 +1,28 @@
+package game.graphics;
+
+import game.tile.Tile;
+
+public class Sprite {
+
+	public static final Sprite grassSprite = new Sprite(Tile.STDSIZE, 0, 0, SpriteSheet.terrain);
+	public static final Sprite dirtSprite = new Sprite(Tile.STDSIZE, 1, 0, SpriteSheet.terrain);
+
+	public int size;
+	public int[] pixels;
+
+	public Sprite(int size, int x, int y, SpriteSheet sheet) {
+		this.size = size;
+		pixels = new int[size * size];
+		for (int yy = 0; yy < size; yy++) {
+			int yOffs = y * size + yy;
+			if (yOffs < 0 || yOffs >= sheet.height)
+				continue;
+			for (int xx = 0; xx < size; xx++) {
+				int xOffs = x * size + xx;
+				if (xOffs < 0 || xOffs >= sheet.width)
+					continue;
+				pixels[x + y * size] = sheet.pixels[xx + yy * sheet.width];
+			}
+		}
+	}
+}

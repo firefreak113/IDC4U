@@ -1,0 +1,13 @@
+package game.level;
+
+import javax.swing.JFrame;
+
+public class Editor {
+
+	private JFrame frame;
+	
+	public Editor(){
+		frame=new JFrame("Level Editor");
+		
+	}
+}

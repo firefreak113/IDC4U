@@ -1,0 +1,64 @@
+package game.graphics;
+
+import java.awt.Graphics2D;
+import java.awt.Image;
+import java.awt.image.BufferedImage;
+import java.io.IOException;
+
+import javax.imageio.ImageIO;
+
+public class SpriteSheet {
+
+	public static final SpriteSheet terrain = new SpriteSheet("/sprite/Terrain.png", 320, 320);
+
+	public String path;
+
+	public int width;
+	public int height;
+	public int[] pixels;
+
+	public SpriteSheet(String path, int width, int height) {
+		this.path = path;
+		this.width = width;
+		this.height = height;
+		pixels = new int[width * height];
+		try {
+			BufferedImage in = ImageIO.read(SpriteSheet.class.getResource(path));
+			for (int y = 0; y < height; y++)
+				for (int x = 0; x < width; x++)
+					pixels[x + y * width] = in.getRGB(x, y);
+		} catch (IOException e) {
+			e.printStackTrace();
+			System.exit(1);
+		}
+	}
+
+	public SpriteSheet(String path, int width, int height, int scaleWidth, int scaleHeight) {
+		this.path = path;
+		this.width = width;
+		this.height = height;
+		pixels = new int[width * height];
+		try {
+			BufferedImage in = resize(ImageIO.read(SpriteSheet.class.getResource(path)), scaleWidth, scaleHeight);
+			for (int y = 0; y < height; y++)
+				for (int x = 0; x < width; x++)
+					try {
+						pixels[x + y * width] = in.getRGB(x, y);
+					} catch (ArrayIndexOutOfBoundsException e) {
+						continue;
+					}
+		} catch (IOException e) {
+			e.printStackTrace();
+			System.exit(1);
+		}
+	}
+
+	public static BufferedImage resize(BufferedImage img, int newW, int newH) {
+		Image tmp = img.getScaledInstance(newW, newH, Image.SCALE_SMOOTH);
+		BufferedImage dimg = new BufferedImage(newW, newH, BufferedImage.TYPE_INT_ARGB);
+		Graphics2D g2d = dimg.createGraphics();
+		g2d.drawImage(tmp, 0, 0, null);
+		g2d.dispose();
+		return dimg;
+	}
+}

@@ -1,0 +1,120 @@
+package game.level;
+
+import game.graphics.Render;
+import game.graphics.Sprite;
+import game.tile.Tile;
+
+public class Level {
+
+	public Tile[] tiles;
+
+	public int width;
+	public int height;
+	public int xOffs;
+	public int yOffs;
+
+	private WorldGenerator generator;
+
+	public Level(int width, int height) {
+		this.width = width;
+		this.height = height;
+		tiles = new Tile[width * height];
+		(generator = new WorldGenerator()).generateLevel(this, 5);
+	}
+
+	public void update() {
+		for (int y = 0; y < height; y++) {
+			for (int x = 0; x < width; x++) {
+				Tile t = tiles[x + y * width];
+				switch (t.physicsType) {
+				case STD:
+					int i = generator.rand.nextInt(2);
+					switch (i) {
+					case 0:
+						for (int j = 1; j >= -1; j--)
+							try {
+								if (tiles[(x + j) + (y + 1) * width] == Tile.airTile)
+									generator.swapTiles(x, y, x + j, y + 1);
+							} catch (ArrayIndexOutOfBoundsException e) {
+								continue;
+							}
+						break;
+					case 1:
+						for (int j = -1; j <= 1; j++)
+							try {
+								if (tiles[(x + j) + (y + 1) * width] == Tile.airTile)
+									generator.swapTiles(x, y, x + j, y + 1);
+							} catch (ArrayIndexOutOfBoundsException e) {
+								continue;
+							}
+						break;
+					}
+					break;
+				case SLOW:
+					if (generator.rand.nextInt(1001) <= 50) {
+						int k = generator.rand.nextInt(2);
+						switch (k) {
+						case 0:
+							for (int j = 1; j >= -1; j--)
+								try {
+									if (tiles[(x + j) + (y + 1) * width] == Tile.airTile)
+										generator.swapTiles(x, y, x + j, y + 1);
+								} catch (ArrayIndexOutOfBoundsException e) {
+									continue;
+								}
+							break;
+						case 1:
+							for (int j = -1; j <= 1; j++)
+								try {
+									if (tiles[(x + j) + (y + 1) * width] == Tile.airTile)
+										generator.swapTiles(x, y, x + j, y + 1);
+								} catch (ArrayIndexOutOfBoundsException e) {
+									continue;
+								}
+							break;
+						}
+					}
+					break;
+				case ANAR:
+					if (generator.rand.nextInt(1001) <= 50) {
+						int k = generator.rand.nextInt(2);
+						switch (k) {
+						case 0:
+							for (int j = 1; j >= -1; j--)
+								try {
+									if (tiles[(x + j) + (y - 1) * width] == Tile.airTile)
+										generator.swapTiles(x, y, x + j, y - 1);
+								} catch (ArrayIndexOutOfBoundsException e) {
+									continue;
+								}
+							break;
+						case 1:
+							for (int j = -1; j <= 1; j++)
+								try {
+									if (tiles[(x + j) + (y - 1) * width] == Tile.airTile)
+										generator.swapTiles(x, y, x + j, y - 1);
+								} catch (ArrayIndexOutOfBoundsException e) {
+									continue;
+								}
+							break;
+						}
+					}
+					break;
+				case NONE:
+					break;
+				}
+			}
+		}
+		generator.growGrass();
+	}
+
+	public void render(Render render) {
+		for (int y = 0; y < height; y++) {
+			for (int x = 0; x < width; x++) {
+				Tile t = tiles[x + y * width];
+				if (t != Tile.airTile)
+					render.renderSprite(xOffs + x * t.sprite.size, yOffs + y * t.sprite.size, t.sprite);
+			}
+		}
+	}
+}

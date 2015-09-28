@@ -1,0 +1,9 @@
+package game.graphics;
+
+import game.Engine;
+import game.tile.Tile;
+
+public class Background {
+
+	public static Sprite[] airSprites = new Sprite[(Engine.WIDTH * Engine.HEIGHT) / Tile.STDSIZE];
+}

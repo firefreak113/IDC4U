@@ -1,0 +1,7 @@
+package game.tile.gametiles;
+
+import game.tile.Tile;
+
+public class SolidStoneTile extends Tile {
+
+}

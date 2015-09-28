@@ -1,0 +1,34 @@
+package game;
+
+import java.awt.Color;
+
+public class Time {
+
+	private static int time;
+	private static int lengthOfDay = 600;
+	private static int div = lengthOfDay / 24;
+
+	public static void update() {
+		if (++time >= lengthOfDay)
+			time = 0;
+	}
+
+	public static int darkenForTime(int colour) {
+		Color c = new Color(colour);
+		int r = c.getRed();
+		int g = c.getGreen();
+		int b = c.getBlue();
+		double d = 1.0;
+		if (time >= 0 && time <= 5.0 * div)
+			d = 1.0;
+		else if (time >= 19.0 * div && time <= 24.0 * div)
+			d = 1.0;
+		else if (time >= 7.0 * div && time <= 17.0 * div)
+			d = 0.2;
+		else if (time > 5.0 * div && time < 7.0 * div)
+			d = 0.2 * ((double) time / (2.0 * div));
+		else if (time > 17.0 * div && time < 19.0 * div)
+			d = 0.2 * (1 - (double) time / (2.0 * div));
+		return new Color((int) (r * d), (int) (g * d), (int) (b * d)).getRGB();
+	}
+}

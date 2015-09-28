@@ -1,0 +1,745 @@
+package game.level;
+
+import game.Game;
+import game.graphics.Render;
+import game.graphics.Sprite;
+import game.tile.Tile;
+
+import java.awt.BorderLayout;
+import java.awt.Canvas;
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Font;
+import java.awt.Graphics;
+import java.awt.Point;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+import java.awt.event.MouseMotionListener;
+import java.awt.event.MouseWheelEvent;
+import java.awt.event.MouseWheelListener;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+import java.awt.image.BufferStrategy;
+import java.awt.image.BufferedImage;
+import java.awt.image.DataBufferInt;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.io.UnsupportedEncodingException;
+import java.util.Random;
+
+import javax.imageio.ImageIO;
+import javax.swing.ButtonGroup;
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JFileChooser;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JRadioButton;
+import javax.swing.UIManager;
+import javax.swing.UnsupportedLookAndFeelException;
+import javax.swing.filechooser.FileFilter;
+
+public class Editor implements MouseListener,MouseMotionListener,MouseWheelListener,KeyListener{
+
+	// Level format and level image format extensions
+	public static final String levelExtension=".lvl";
+	public static final String levelImageExtension=".png";
+	//Where to store temporary files
+	private static final String tempFileLocation=System.getProperty("user.home")+"\\Satchel\\Level Editor\\Temp Files\\";
+
+	// Width and Height in tile precision
+	public static final int XRES=35;
+	public static final int YRES=35;
+	private static String title="Satchel Level Editor";
+	private static String openWithFileUrl="none";	//If we use the "Open With" dialogue
+	private static String[] tiles=new String[Tile.gameTiles.size()];// Tile names
+	private static Sprite[] tileSprites=new Sprite[tiles.length];// Tile sprites
+	private static int[] tileIDs=new int[tiles.length];// Tile ID's
+
+	// ^^ Arrays' orders MUST be kept constant
+
+	public static void main(String[] args){
+		if(args.length>0)
+			openWithFileUrl=args[0];
+		// Get tile data from Game's tileset
+		for(int i=0;i<tiles.length;i++){
+			String name=Tile.gameTiles.get(i).getClass().getSimpleName();
+			tiles[i]=name.substring(0,name.length()-4);
+			tileSprites[i]=Tile.gameTiles.get(i).sprite;
+			tileIDs[i]=Tile.gameTiles.get(i).referenceID;
+		}
+		// Set to native user interface style
+		try{
+			UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+		}catch(ClassNotFoundException|InstantiationException|IllegalAccessException|UnsupportedLookAndFeelException e){
+			e.printStackTrace();
+		}
+		// Initialize Editor
+		new Editor();
+	}
+
+	// LEVEL EDITOR
+
+	// Tiles to save
+	private Tile[][] newLevel=new Tile[XRES][YRES];
+	// Tile count, MUST have same order as tile names and indexes
+	private int[] counters=new int[tiles.length];
+
+	private Thread thread;
+	private JFrame frame;
+	private JPanel panel; // Side bar thing
+	private Canvas currentTile; // Preview for whatever tile
+	private Render preview; // Same^
+	private Render render; // Render for map
+	private BufferedImage previewImg; // Image for preview
+	private BufferedImage img; // Image for map
+	private Canvas canvas; // Canvas for map
+	// Info for current tile
+	private JLabel infoName;
+	private JLabel infoID;
+	private JLabel infoSolid;
+	private JLabel infoHarmful;
+	private JLabel infoLiquid;
+	private JLabel infoInMap;
+	private JLabel spawnLocation;
+	private JButton setAll;
+	private JButton openInGame;
+	private JButton randomize;
+	private JButton clear;
+	private JButton open;
+	private JButton save;
+	private JButton export;
+	private JComboBox<String> tileMenu; // Drop down for tiles
+	private JRadioButton pen;
+	private JRadioButton bucket;
+	private JRadioButton border;
+	private Random random;
+	private String statusBar;	//Status bar, Java graphics will render this
+	private Point spawnPoint;	//Where the player will spawn if launched in game
+
+	private int[] previewPixels;
+	private int[] pixels;
+
+	private int mouseX;
+	private int mouseY;
+	private int stateIndex;	//What state to load for undo/redo
+
+	private boolean mouseB;
+	private boolean running;
+	private boolean shift;
+
+	private Editor(){
+		random=new Random();
+		spawnPoint=new Point(5,5);
+		frame=new JFrame(title);
+		try{
+			frame.setIconImage(ImageIO.read(Editor.class.getResource("/textures/cursor.png")));
+		}catch(IOException e){
+			e.printStackTrace();
+		}
+		canvas=new Canvas();
+		panel=new JPanel();
+		infoName=new JLabel();
+		infoID=new JLabel();
+		infoSolid=new JLabel();
+		infoHarmful=new JLabel();
+		infoLiquid=new JLabel();
+		infoInMap=new JLabel();
+		spawnLocation=new JLabel("Spawn At: "+spawnPoint.x+", "+spawnPoint.y);
+		setAll=new JButton("Conform");
+		setAll.addActionListener(new ActionListener(){
+
+			public void actionPerformed(ActionEvent e){
+				saveState(stateIndex);
+				conformLevel();
+			}
+		});
+		randomize=new JButton("Random");
+		randomize.addActionListener(new ActionListener(){
+
+			public void actionPerformed(ActionEvent e){
+				saveState(stateIndex);
+				for(int y=0;y<YRES;y++)
+					for(int x=0;x<XRES;x++)
+						newLevel[x][y]=Tile.gameTiles.get(random.nextInt(Tile.gameTiles.size()));
+			}
+		});
+		clear=new JButton("Clear");
+		clear.addActionListener(new ActionListener(){
+
+			public void actionPerformed(ActionEvent e){
+				saveState(stateIndex);
+				for(int y=0;y<YRES;y++)
+					for(int x=0;x<XRES;x++)
+						newLevel[x][y]=Tile.voidTile;
+			}
+		});
+		open=new JButton("Open");
+		open.addActionListener(new ActionListener(){
+
+			public void actionPerformed(ActionEvent e){
+				saveState(stateIndex);
+				openLevel();
+			}
+		});
+		save=new JButton("Save");
+		save.addActionListener(new ActionListener(){
+
+			public void actionPerformed(ActionEvent e){
+				saveState(stateIndex);
+				saveLevel();
+			}
+		});
+		export=new JButton("Export");
+		export.addActionListener(new ActionListener(){
+			
+			public void actionPerformed(ActionEvent e){
+				export();
+			}
+		});
+		pen=new JRadioButton("Normal Draw");
+		bucket=new JRadioButton("Flood Fill");
+		border=new JRadioButton("Border Fill");
+		ButtonGroup options=new ButtonGroup();
+		options.add(pen);
+		options.add(bucket);
+		options.add(border);
+		pen.setSelected(true);
+		currentTile=new Canvas();
+		preview=new Render(16,16);
+		render=new Render(XRES<<4,YRES<<4);
+		previewImg=new BufferedImage(16,16,BufferedImage.TYPE_INT_RGB);
+		img=new BufferedImage(XRES<<4,YRES<<4,BufferedImage.TYPE_INT_RGB);
+		previewPixels=((DataBufferInt)previewImg.getRaster().getDataBuffer()).getData();
+		pixels=((DataBufferInt)img.getRaster().getDataBuffer()).getData();
+		tileMenu=new JComboBox<String>(tiles);
+		tileMenu.setSelectedIndex(0);
+		canvas.addMouseListener(this);
+		canvas.addMouseMotionListener(this);
+		canvas.addKeyListener(this);
+		frame.addMouseWheelListener(this);
+		frame.add(canvas);
+		panel.setLayout(null);
+		panel.add(tileMenu);
+		panel.add(currentTile);
+		currentTile.setBounds(164,22,16,16);
+		tileMenu.setBounds(20,20,119,20);
+		panel.add(infoName);
+		infoName.setBounds(20,60,160,20);
+		panel.add(infoID);
+		infoID.setBounds(20,90,160,20);
+		panel.add(infoSolid);
+		infoSolid.setBounds(20,120,60,20);
+		panel.add(infoHarmful);
+		infoHarmful.setBounds(140,120,60,20);
+		panel.add(infoLiquid);
+		infoLiquid.setBounds(80,120,60,20);
+		panel.add(infoInMap);
+		infoInMap.setBounds(20,150,160,20);
+		panel.add(pen);
+		pen.setBounds(20,180,160,20);
+		panel.add(bucket);
+		bucket.setBounds(20,210,160,20);
+		panel.add(border);
+		border.setBounds(20,240,160,20);
+		panel.add(spawnLocation);
+		spawnLocation.setBounds(20,270,160,20);
+		panel.add(setAll);
+		setAll.setBounds(20,480,80,20);
+		panel.add(openInGame);
+		openInGame.setBounds(100,480,80,20);
+		panel.add(clear);
+		clear.setBounds(20,500,80,20);
+		panel.add(randomize);
+		randomize.setBounds(100,500,80,20);
+		panel.add(open);
+		open.setBounds(20,520,80,20);
+		panel.add(save);
+		save.setBounds(100,520,80,20);
+		panel.add(export);
+		export.setBounds(20,540,160,20);
+		panel.setPreferredSize(new Dimension(200,600));
+		frame.add(panel,BorderLayout.EAST);
+		frame.setPreferredSize(new Dimension(800,600));
+		frame.addWindowListener( new WindowAdapter() {
+			
+			public void windowClosing(WindowEvent e) {
+				//TODO: Ask if user wants to save an unsaved level
+				//Clear temp files
+				clearDirectory(new File(tempFileLocation));
+				System.exit(0);
+			}
+		} );
+		frame.pack();
+		frame.setVisible(true);
+		frame.setResizable(false);
+		frame.setLocationRelativeTo(null);
+		frame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+		// Set all tiles to void as default
+		for(int y=0;y<YRES;y++)
+			for(int x=0;x<XRES;x++)
+				newLevel[x][y]=Tile.voidTile;
+		// Set counters to zero
+		for(int i=0;i<counters.length;i++)
+			if(i==Tile.gameTiles.indexOf(Tile.voidTile))
+				counters[i]=newLevel.length;
+			else counters[i]=0;
+		start();
+	}
+
+	public static Tile getTile(int id){
+		for(Tile tile:Tile.gameTiles)
+			if(tile.id==id) return tile;
+		return Tile.voidTile;
+	}
+
+	private synchronized void start(){
+		if(running) return;
+		running=true;
+		thread=new Thread(title){
+
+			public void run(){
+				//Open the "Open With" file, if it exists
+				if(openWithFileUrl!="none"){
+					File file=new File(openWithFileUrl);
+					BufferedReader br=null;
+					try{
+						br=new BufferedReader(new FileReader(file));
+						String line;
+						int row=0;
+						while((line=br.readLine())!=null){
+							String[] tileData=line.split("~");
+							for(int i=0;i<tileData.length;i++)
+								newLevel[i][row]=getTile(Integer.parseInt(tileData[i]));
+							row++;
+						}
+						br.close();
+						statusBar="Successfully Opened: "+openWithFileUrl;
+					}catch(IOException ex){}
+				}else statusBar="Ready";
+				saveState(stateIndex);//Starting state; "void level"
+				canvas.requestFocus();
+				while(running){
+					update();
+					renderPreview();
+					render();
+				}
+			}
+		};
+		thread.start();
+	}
+	
+	private void conformNext(Tile tile, Tile next, int x, int y){
+		if(tile==next)return;
+		newLevel[x][y]=next;
+		for(int xx=-1;xx<=1;xx++){
+			for(int yy=-1;yy<=1;yy++){
+				if(abs(xx)==abs(yy))continue;
+				try{
+					if(newLevel[x+xx][y+yy]==tile)
+						conformNext(tile, next, x+xx, y+yy);
+				}catch(ArrayIndexOutOfBoundsException e){
+					continue;
+				}
+			}
+		}
+	}
+
+	private void update(){
+		// Adding new tiles
+		if(!shift&&mouseB&&getMouseXTilePrecision(mouseX)>=0&&getMouseYTilePrecision(mouseY)>=0){
+			int xPos=getMouseXTilePrecision(mouseX);
+			int yPos=getMouseYTilePrecision(mouseY);
+			if(xPos<XRES&&xPos>=0&&yPos<YRES&&yPos>=0){
+				//Flood Fill
+				if(bucket.isSelected())
+					conformNext(newLevel[xPos][yPos], Tile.gameTiles.get(tileMenu.getSelectedIndex()),xPos,yPos);
+				else if(border.isSelected())
+					addBorder();
+				else newLevel[xPos][yPos]=Tile.gameTiles.get(tileMenu.getSelectedIndex());
+			}
+		}else if(shift&&mouseB&&getMouseXTilePrecision(mouseX)>=0&&getMouseYTilePrecision(mouseY)>=0){
+			//Sets the spawn point
+			int xPos=getMouseXTilePrecision(mouseX);
+			int yPos=getMouseYTilePrecision(mouseY);
+			if(xPos<XRES&&xPos>=0&&yPos<YRES&&yPos>=0)
+				spawnPoint=new Point(xPos, yPos);
+			statusBar="Spawn At: "+spawnPoint.x+", "+spawnPoint.y;
+			spawnLocation.setText(statusBar);
+		}
+		// Counting tiles
+		for(int y=0;y<YRES;y++)
+			for(int x=0;x<XRES;x++)
+				counters[Tile.gameTiles.indexOf(newLevel[x][y])]++; // Counter for whatever we're scanning increases
+		// Updating tile info
+		infoName.setText("Tile name: "+tiles[tileMenu.getSelectedIndex()]);
+		infoID.setText("Tile ID: "+tileIDs[tileMenu.getSelectedIndex()]);
+		infoSolid.setText("Walk? "+(Tile.gameTiles.get(tileMenu.getSelectedIndex()).isSolid()?"\u2713":"\u00d7"));
+		infoHarmful.setText("Hurt? "+(Tile.gameTiles.get(tileMenu.getSelectedIndex()).isHarmful()?"\u2713":"\u00d7"));
+		infoLiquid.setText("Swim? "+(Tile.gameTiles.get(tileMenu.getSelectedIndex()).isLiquid()?"\u2713":"\u00d7"));
+		infoInMap.setText(counters[tileMenu.getSelectedIndex()]+" "+tiles[tileMenu.getSelectedIndex()]+" tiles in level.");
+		// Clear tile counters
+		for(int i=0;i<counters.length;i++)
+			counters[i]=0;
+	}
+
+	private void render(){
+		BufferStrategy bs=canvas.getBufferStrategy();
+		if(bs==null){
+			canvas.createBufferStrategy(3);
+			return;
+		}
+		Graphics g=bs.getDrawGraphics();
+		// Render the black background
+		g.setColor(Color.black);
+		g.fillRect(0,0,canvas.getWidth(),canvas.getHeight());
+		// Render the tiles
+		for(int y=0;y<YRES;y++)
+			for(int x=0;x<XRES;x++)
+				render.renderTile(x<<4,y<<4,newLevel[x][y]);
+		for(int i=0;i<render.pixels.length;i++)
+			pixels[i]=render.pixels[i];
+		g.drawImage(img,0,0,null);
+		// Render the grid
+		g.setColor(Color.gray);
+		for(int y=0;y<=YRES;y++)
+			g.drawLine(0,y<<4,XRES<<4,y<<4);
+		for(int x=0;x<=XRES;x++)
+			g.drawLine(x<<4,0,x<<4,YRES<<4);
+		//Draw spawn point
+		g.setColor(new Color(150, 220, 245, 100));				
+		g.fillRect(spawnPoint.x<<4, spawnPoint.y<<4, 16, 16);
+		//The status bar
+		g.setColor(Color.white);
+		g.fillRect(0, 561, XRES<<4, 15);
+		g.setColor(Color.darkGray);
+		g.drawRect(0, 561, XRES<<4, 15);
+		g.setFont(new Font("Arial",Font.BOLD,10));
+		g.drawString(statusBar, 2, 570);
+		g.dispose();
+		bs.show();
+	}
+
+	private void renderPreview(){
+		BufferStrategy bs=currentTile.getBufferStrategy();
+		if(bs==null){
+			currentTile.createBufferStrategy(3);
+			return;
+		}
+		Graphics g=bs.getDrawGraphics();
+		Tile current=Tile.gameTiles.get(tileMenu.getSelectedIndex());
+		preview.renderTile(0,0,current);
+		for(int i=0;i<preview.pixels.length;i++)
+			previewPixels[i]=preview.pixels[i];
+		g.drawImage(previewImg,0,0,null);
+		g.dispose();
+		bs.show();
+	}
+
+	private int getMouseXTilePrecision(int x){
+		if(x>XRES<<4) return -1;
+		return x>>4;
+	}
+
+	private int getMouseYTilePrecision(int y){
+		if(y>YRES<<4) return -1;
+		return y>>4;
+	}
+	
+	private void export(){
+		JFileChooser saver=new JFileChooser("Export Level");
+		FileFilter filter=new LevelImageFileFormat();
+		saver.addChoosableFileFilter(filter);
+		saver.setFileFilter(filter);
+		if(saver.showSaveDialog(frame)==JFileChooser.APPROVE_OPTION){
+			File file=new File(saver.getSelectedFile().getAbsolutePath()+(saver.getSelectedFile().getAbsolutePath().endsWith(Editor.levelImageExtension)?"":Editor.levelImageExtension));
+			try{
+				BufferedImage exported=new BufferedImage(XRES, YRES, BufferedImage.TYPE_INT_RGB);
+				for(int y=0;y<YRES;y++)
+					for(int x=0;x<XRES;x++)
+						exported.setRGB(x,y,newLevel[x][y].id);
+				ImageIO.write(exported, Editor.levelImageExtension.substring(1), file);
+				statusBar="Saved Level Image As: "+file.getAbsolutePath();
+			}catch(IOException e1){
+				e1.printStackTrace();
+			}
+		}
+	}
+	
+	private void directExport(String path){
+		File file=new File(path);
+		try{
+			BufferedImage exported=new BufferedImage(XRES, YRES, BufferedImage.TYPE_INT_RGB);
+			for(int y=0;y<YRES;y++)
+				for(int x=0;x<XRES;x++)
+					exported.setRGB(x,y,newLevel[x][y].id);
+			ImageIO.write(exported, Editor.levelImageExtension.substring(1), file);
+			statusBar="Saved Level Image As: "+file.getAbsolutePath();
+		}catch(IOException e1){
+			e1.printStackTrace();
+		}
+	}
+	
+	private void saveLevel(){
+		JFileChooser saver=new JFileChooser("Save Level");
+		FileFilter filter=new LevelFileFormat();
+		saver.addChoosableFileFilter(filter);
+		saver.setFileFilter(filter);
+		if(saver.showSaveDialog(frame)==JFileChooser.APPROVE_OPTION){
+			File file=new File(saver.getSelectedFile().getAbsolutePath()+(saver.getSelectedFile().getAbsolutePath().endsWith(levelExtension)?"":levelExtension));
+			try{
+				PrintWriter writer=new PrintWriter(file.getAbsolutePath(),"UTF-8");
+				for(int y=0;y<YRES;y++){
+					for(int x=0;x<XRES;x++){
+						writer.write(""+newLevel[x][y].id);
+						if(x<XRES-1) writer.write("~");
+					}
+					writer.write(System.lineSeparator());
+				}
+				writer.close();
+				statusBar="Saved Level As: "+file.getAbsolutePath();
+			}catch(FileNotFoundException|UnsupportedEncodingException e1){
+				e1.printStackTrace();
+			}
+		}
+	}
+	
+	private void openLevel(){
+		JFileChooser opener=new JFileChooser("Open Level");
+		FileFilter filter=new LevelFileFormat();
+		opener.addChoosableFileFilter(filter);
+		opener.setFileFilter(filter);
+		if(opener.showOpenDialog(frame)==JFileChooser.APPROVE_OPTION){
+			File file=opener.getSelectedFile();
+			BufferedReader br=null;
+			try{
+				br=new BufferedReader(new FileReader(file));
+				String line;
+				int row=0;
+				while((line=br.readLine())!=null){
+					String[] tileData=line.split("~");
+					for(int i=0;i<tileData.length;i++)
+						newLevel[i][row]=getTile(Integer.parseInt(tileData[i]));
+					row++;
+				}
+				br.close();
+				statusBar="Opened Level: "+file.getAbsolutePath();
+			}catch(IOException ex){
+				ex.printStackTrace();
+			}
+		}
+	}
+	
+	private void conformLevel(){
+		for(int y=0;y<YRES;y++)
+			for(int x=0;x<XRES;x++)
+				newLevel[x][y]=Tile.gameTiles.get(tileMenu.getSelectedIndex());
+		statusBar="Conformed All Level Tiles To: "+tileMenu.getSelectedItem();
+	}
+	
+	private void addBorder(){
+		for(int y=0;y<YRES;y++)
+			for(int i=0;i<=1;i++)
+				newLevel[i==0?0:XRES-1][y]=Tile.gameTiles.get(tileMenu.getSelectedIndex());
+		for(int x=0;x<XRES;x++)
+			for(int i=0;i<=1;i++)
+				newLevel[x][i==0?0:YRES-1]=Tile.gameTiles.get(tileMenu.getSelectedIndex());
+	}
+	
+	private void saveState(int index){
+		//Check to see if the most recent save is identical to this one
+		if(index>0)if(statesMatch(getTileDataFromLevel(),getTileDataFromState(index-1)))
+			return;
+		if(stateIndex<100)	//100 is plenty of states to save for undo/redo
+			stateIndex++;
+		else 
+			stateIndex=0;
+		File file=new File(tempFileLocation);
+		if(!file.exists())file.mkdirs();
+		try{
+			PrintWriter writer=new PrintWriter(tempFileLocation+index+levelExtension,"UTF-8");
+			for(int y=0;y<YRES;y++){
+				for(int x=0;x<XRES;x++){
+					writer.write(""+newLevel[x][y].id);
+					if(x<XRES-1) writer.write("~");
+				}
+				writer.write(System.lineSeparator());
+			}
+			writer.close();
+		}catch(FileNotFoundException|UnsupportedEncodingException e){
+			e.printStackTrace();
+		}
+	}
+	
+	private void loadState(int index){
+		//If what we are loading is already loaded, load the next state
+		if(statesMatch(getTileDataFromLevel(),getTileDataFromState(index))){
+			if(index>0)loadState(--index);
+			return;
+		}			
+		BufferedReader br=null;
+		try{
+			br=new BufferedReader(new FileReader(new File(tempFileLocation+index+levelExtension)));
+			String line;
+			int row=0;
+			while((line=br.readLine())!=null){
+				String[] tileData=line.split("~");
+				for(int i=0;i<tileData.length;i++)
+					newLevel[i][row]=getTile(Integer.parseInt(tileData[i]));
+				row++;
+			}
+			stateIndex--;
+			br.close();
+		}catch(IOException e){
+			return;
+		}
+	}
+	
+	private int[][]getTileDataFromState(int index){
+		int[][]tiles = new int[XRES][YRES];
+		File file=new File(tempFileLocation);
+		if(!file.exists())file.mkdirs();
+		BufferedReader br=null;
+		try{
+			br=new BufferedReader(new FileReader(new File(tempFileLocation+index+levelExtension)));
+			String line;
+			int row=0;
+			while((line=br.readLine())!=null){
+				String[] tileData=line.split("~");
+				for(int i=0;i<tileData.length;i++)
+					tiles[i][row]=Integer.parseInt(tileData[i]);
+				row++;
+			}
+			br.close();
+		}catch(IOException e){
+			e.printStackTrace();
+		}
+		return tiles;
+	}
+	
+	private int[][]getTileDataFromLevel(){
+		int[][]tiles = new int[XRES][YRES];
+		for(int y=0;y<YRES;y++){
+			for(int x=0;x<XRES;x++){
+				tiles[x][y]=newLevel[x][y].id;
+			}
+		}
+		return tiles;
+	}
+	
+	private boolean statesMatch(int[][] s1, int[][] s2){
+		boolean[]matches=new boolean[XRES*YRES];
+		for(int y=0;y<YRES;y++)
+			for(int x=0;x<XRES;x++)
+				if(s1[x][y]==s2[x][y])matches[x+y*XRES]=true;
+				else matches[x+y*XRES]=false;
+		for(int i=0;i<matches.length;i++)
+			if(!matches[i])return false;
+		return true;
+	}
+	
+	private void clearDirectory(File dir) {
+	    for (File file: dir.listFiles()) {
+	        if (file.isDirectory()) clearDirectory(file);
+	        file.delete();
+	    }
+	}
+
+	public void mouseClicked(MouseEvent e){
+
+	}
+
+	public void mouseEntered(MouseEvent e){
+
+	}
+
+	public void mouseExited(MouseEvent e){
+
+	}
+
+	public void mousePressed(MouseEvent e){
+		mouseX=e.getX();
+		mouseY=e.getY();
+		mouseB=true;
+	}
+
+	public void mouseReleased(MouseEvent e){
+		mouseX=e.getX();
+		mouseY=e.getY();
+		mouseB=false;
+		saveState(stateIndex);
+	}
+
+	public void mouseDragged(MouseEvent e){
+		mouseX=e.getX();
+		mouseY=e.getY();
+	}
+
+	public void mouseMoved(MouseEvent e){
+		mouseX=e.getX();
+		mouseY=e.getY();
+	}
+
+	public void mouseWheelMoved(MouseWheelEvent e){
+		if(e.getWheelRotation()>0&&tileMenu.getSelectedIndex()<tileMenu.getItemCount()-1)
+			tileMenu.setSelectedIndex(tileMenu.getSelectedIndex()+1);
+		else if(e.getWheelRotation()<0&&tileMenu.getSelectedIndex()>0) tileMenu.setSelectedIndex(tileMenu.getSelectedIndex()-1);
+	}
+		
+	public void keyPressed(KeyEvent e) {
+		if(e.isControlDown()){
+			switch(e.getKeyCode()){
+			case KeyEvent.VK_F://Toggle flood fill
+				bucket.setSelected(true);
+				break;
+			case KeyEvent.VK_B:
+				border.setSelected(true);
+				break;
+			case KeyEvent.VK_P:
+				pen.setSelected(true);
+				break;
+			case KeyEvent.VK_N:
+				//New file
+				break;
+			case KeyEvent.VK_S://Save level
+				saveLevel();
+				break;
+			case KeyEvent.VK_O://Open level
+				openLevel();
+				break;
+			case KeyEvent.VK_C://Conform level
+				conformLevel();
+				break;
+			case KeyEvent.VK_Z://Undo
+				if(stateIndex>0)loadState(stateIndex-1);
+				break;
+			case KeyEvent.VK_Y://Redo
+				//if(stateIndex<100)loadState(stateIndex+1);
+				//else loadState(0);
+				break;
+			}
+		}
+		shift=e.isShiftDown();
+	}
+	
+	public void keyReleased(KeyEvent e) {
+		shift=e.isShiftDown();
+	}
+	
+	public void keyTyped(KeyEvent e) {
+		
+	}
+	
+	private static int abs(int i){
+		return i<0?-1:i;
+	}
+}

@@ -1,0 +1,23 @@
+package game.graphics;
+
+import game.Engine;
+import game.tile.Tile;
+
+public class Background {
+
+	public static SpriteSheet background = new SpriteSheet("/sprite/Background.png", 800, 800, Engine.WIDTH, Engine.HEIGHT);
+
+	public static Sprite[] airSprites = new Sprite[(Engine.WIDTH * Engine.HEIGHT) / Tile.STDSIZE];
+
+	public static void refresh() {
+		background = new SpriteSheet("/sprite/Background.png", 800, 800, Engine.WIDTH, Engine.HEIGHT);
+		airSprites = new Sprite[(Engine.WIDTH * Engine.HEIGHT) / Tile.STDSIZE];
+		for (int y = 0; y < Engine.HEIGHT / Tile.STDSIZE; y++)
+			for (int x = 0; x < Engine.WIDTH / Tile.STDSIZE; x++)
+				try {
+					airSprites[x + y * (Engine.WIDTH / Tile.STDSIZE)] = new Sprite(Tile.STDSIZE, x, y, background);
+				} catch (ArrayIndexOutOfBoundsException e) {
+					continue;
+				}
+	}
+}

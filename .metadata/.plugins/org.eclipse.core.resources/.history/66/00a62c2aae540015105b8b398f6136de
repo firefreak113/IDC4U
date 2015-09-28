@@ -1,0 +1,8 @@
+package game.level;
+
+import javax.swing.JFrame;
+
+public class Editor {
+
+	
+}

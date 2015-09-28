@@ -1,0 +1,157 @@
+package game.level;
+
+import game.tile.Tile;
+
+import java.awt.Point;
+import java.util.Random;
+
+public class WorldGenerator {
+
+	protected Random rand = new Random();
+
+	private int WIDTH;
+	private int HEIGHT;
+	private int stoneStart;
+	private int dirtStop;
+
+	private int[] heightMap;
+	private Point[] caveGrid;
+	private Tile[] tiles;
+
+	public void generateLevel(Level level, final int randomizations) {
+		WIDTH = level.width;
+		HEIGHT = level.height;
+		tiles = level.tiles;
+		stoneStart = HEIGHT / 2;
+		dirtStop = 2 * HEIGHT / 3;
+		heightMap = getHeightMap();
+		caveGrid = getCaveGrid(rand.nextInt(15) + 3 * WIDTH / 200);
+		addTiles();
+		addMountain(rand.nextInt(WIDTH), rand.nextInt(100) + 20, rand.nextInt(100) + 20);
+		level.tiles = tiles;
+	}
+
+	private int[] getHeightMap() {
+		int[] r = new int[WIDTH];
+		int start = HEIGHT / 2;
+		r[0] = start;
+		r[1] = start + rand.nextInt(3) - 1;
+		for (int i = 2; i < WIDTH; i++) {
+			switch (r[i - 1] - r[i - 2]) {
+			case -1:
+				int j = rand.nextInt(100);
+				if (j < 10)
+					r[i] = r[i - 1] + 1;
+				else if (j < 35)
+					r[i] = r[i - 1];
+				else if (j < 100)
+					r[i] = r[i - 1] - 1;
+				break;
+			case 0:
+				int k = rand.nextInt(100);
+				if (k < 50)
+					r[i] = r[i - 1];
+				else
+					r[i] = r[i - 1] + rand.nextInt(3) - 1;
+				break;
+			case 1:
+				int l = rand.nextInt(100);
+				if (l < 10)
+					r[i] = r[i - 1] - 1;
+				else if (l < 35)
+					r[i] = r[i - 1];
+				else if (l < 100)
+					r[i] = r[i - 1] + 1;
+				break;
+			}
+		}
+		return r;
+	}
+
+	private Point[] getCaveGrid(int numCaves) {
+		Point[] r = new Point[numCaves];
+		for (int i = 0; i < numCaves; i++)
+			r[i] = new Point(rand.nextInt(WIDTH), stoneStart + rand.nextInt(HEIGHT - stoneStart));
+		return r;
+	}
+
+	private void addTiles() {
+		for (int x = 0; x < WIDTH; x++)
+			for (int y = 0; y < HEIGHT; y++)
+				try {
+					if (y < heightMap[x])
+						tiles[x + y * WIDTH] = Tile.airTile;
+					else if (y > stoneStart && y < dirtStop)
+						tiles[x + y * WIDTH] = rand.nextInt(100) <= (100 * ((double) (y - stoneStart) / (double) (dirtStop - stoneStart))) ? Tile.stoneTile : Tile.dirtTile;
+					else if (y >= dirtStop)
+						tiles[x + y * WIDTH] = Tile.stoneTile;
+					else
+						tiles[x + y * WIDTH] = Tile.dirtTile;
+				} catch (ArrayIndexOutOfBoundsException e) {
+					continue;
+				}
+	}
+
+	protected void swapTiles(int x1, int y1, int x2, int y2) {
+		try {
+			Tile p = tiles[x1 + y1 * WIDTH];
+			tiles[x1 + y1 * WIDTH] = tiles[x2 + y2 * WIDTH];
+			tiles[x2 + y2 * WIDTH] = p;
+		} catch (ArrayIndexOutOfBoundsException e) {
+			return;
+		}
+	}
+
+	public void shiftColumn(int c, int d) {
+		Tile[] copy = tiles;
+		if (d == 0)
+			return;
+		if (d < 0)
+			for (int i = HEIGHT; i > 0; i--)
+				try {
+					copy[c + i * WIDTH] = tiles[c + (i + d) * WIDTH];
+				} catch (ArrayIndexOutOfBoundsException e) {
+					continue;
+				}
+		else
+			for (int i = 0; i < HEIGHT; i++)
+				try {
+					copy[c + i * WIDTH] = tiles[c + (i + d) * WIDTH];
+				} catch (ArrayIndexOutOfBoundsException e) {
+					continue;
+				}
+		tiles = copy;
+	}
+
+	protected void growGrass() {
+		for (int y = 0; y < HEIGHT; y++) {
+			for (int x = 0; x < WIDTH; x++) {
+				if (tiles[x + y * WIDTH] == Tile.airTile && y > heightMap[x])
+					tiles[x + y * WIDTH] = rand.nextInt(4) == 0 ? Tile.dirtTile : Tile.stoneTile;
+				else if (tiles[x + y * WIDTH] == Tile.grassTile && tiles[x + (y - 1) * WIDTH] != Tile.airTile)
+					tiles[x + y * WIDTH] = Tile.dirtTile;
+				else if (tiles[x + y * WIDTH] == Tile.dirtTile && tiles[x + (y - 1) * WIDTH] == Tile.airTile)
+					tiles[x + y * WIDTH] = rand.nextInt(1001) <= 50 ? Tile.grassTile : Tile.dirtTile;
+			}
+		}
+	}
+
+	private void addMountain(int x, int w, int h) {
+		for (int yy = 0; yy <= 2 * h; yy++)
+			for (int xx = -w; xx <= w; xx++)
+				try {
+					if (xx * xx + yy * yy <= w * h)
+						tiles[x + xx + yy * WIDTH] = Tile.stoneTile;
+				} catch (ArrayIndexOutOfBoundsException e) {
+					continue;
+				}
+		for (int yy = 0; yy < HEIGHT; yy++)
+			for (int xx = 0; xx < w; xx++)
+				try {
+					if (tiles[x + xx + yy * WIDTH] == Tile.dirtTile)
+						tiles[x + xx + yy * WIDTH] = Tile.stoneTile;
+				} catch (ArrayIndexOutOfBoundsException e) {
+					continue;
+				}
+	}
+}

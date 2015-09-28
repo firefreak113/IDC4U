@@ -1,0 +1,23 @@
+package game;
+
+import java.awt.Color;
+
+public class Time {
+
+	private static int time;
+	private static int lengthOfDay = 600;
+
+	public static void update() {
+		if (++time >= lengthOfDay)
+			time = 0;
+	}
+
+	public static int darkenForTime(int colour) {
+		Color c = new Color(colour);
+		int r = c.getRed();
+		int g = c.getGreen();
+		int b = c.getBlue();
+		double d = Math.cos(((2 * Math.PI) / 600) * (double) time);
+		return new Color((int) (r * d), (int) (g * d), (int) (b * d)).getRGB();
+	}
+}

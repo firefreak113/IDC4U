@@ -1,0 +1,65 @@
+package game.graphics;
+
+import game.tile.Tile;
+
+import java.awt.AlphaComposite;
+import java.awt.Graphics2D;
+import java.awt.RenderingHints;
+import java.awt.image.BufferedImage;
+
+import javax.imageio.ImageIO;
+
+public class Sprite {
+
+	public static final Sprite backGround = new Sprite(800, 0, 0, new SpriteSheet("/sprite/Background.png", 800, 800));
+
+	public static final Sprite airSprite = new Sprite(Tile.STDSIZE, 0x00aadd);
+
+	public static final Sprite grassSprite = new Sprite(Tile.STDSIZE, 0, 0, SpriteSheet.terrain);
+	public static final Sprite dirtSprite = new Sprite(Tile.STDSIZE, 1, 0, SpriteSheet.terrain);
+	public static final Sprite stoneSprite = new Sprite(Tile.STDSIZE, 2, 0, SpriteSheet.terrain);
+
+	public int size;
+	public int[] pixels;
+
+	public Sprite(int size, int x, int y, SpriteSheet sheet) {
+		this.size = size;
+		pixels = new int[size * size];
+		for (int yy = 0; yy < size; yy++) {
+			int yOffs = y * size + yy;
+			if (yOffs < 0 || yOffs >= sheet.height)
+				continue;
+			for (int xx = 0; xx < size; xx++) {
+				int xOffs = x * size + xx;
+				if (xOffs < 0 || xOffs >= sheet.width)
+					continue;
+				pixels[xx + yy * size] = sheet.pixels[xOffs + yOffs * sheet.width];
+			}
+		}
+	}
+
+	public Sprite(int size, int x, int y, int transformSize, SpriteSheet sheet) {
+		BufferedImage resizedImage = new BufferedImage(transformSize, transformSize, BufferedImage.TYPE_INT_RGB);
+		Graphics2D g = resizedImage.createGraphics();
+		g.drawImage(ImageIO.read(Sprite.class.getResource(sheet.path)), 0, 0, IMG_WIDTH, IMG_HEIGHT, null);
+		g.dispose();
+		g.setComposite(AlphaComposite.Src);
+		g.setRenderingHint(RenderingHints.KEY_INTERPOLATION, RenderingHints.VALUE_INTERPOLATION_BILINEAR);
+		g.setRenderingHint(RenderingHints.KEY_RENDERING, RenderingHints.VALUE_RENDER_QUALITY);
+		g.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+	}
+
+	public Sprite(int size, int colour) {
+		this.size = size;
+		pixels = new int[size * size];
+		for (int i = 0; i < pixels.length; i++)
+			pixels[i] = colour;
+	}
+
+	public int getAverageColour() {
+		int c = 0;
+		for (int i = 0; i < pixels.length; i++)
+			c += pixels[i];
+		return c / pixels.length;
+	}
+}

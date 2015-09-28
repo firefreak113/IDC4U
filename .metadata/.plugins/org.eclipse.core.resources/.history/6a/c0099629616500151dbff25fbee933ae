@@ -1,0 +1,5 @@
+package game.tile;
+
+public class SolidStoneTile {
+
+}

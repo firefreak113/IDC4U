@@ -1,0 +1,9 @@
+package game.level;
+
+public class Editor {
+
+	public Editor() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

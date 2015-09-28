@@ -1,0 +1,2473 @@
+!SESSION 2015-09-04 17:48:36.741 -----------------------------------------------
+eclipse.buildId=4.5.0.I20150603-2000
+java.version=1.8.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.e4.ui.di 2 0 2015-09-04 17:49:02.734
+!MESSAGE [SCR] Found components with duplicated names! Details: 
+Component1 : Component[
+	name = org.eclipse.e4.ui.di.events
+	activate = activate
+	deactivate = deactivate
+	modified = 
+	configuration-policy = optional
+	factory = null
+	autoenable = true
+	immediate = false
+	implementation = org.eclipse.e4.ui.internal.di.UIEventObjectSupplier
+	state = Unsatisfied
+	properties = {dependency.injection.annotation=org.eclipse.e4.ui.di.UIEventTopic}
+	serviceFactory = false
+	serviceInterface = [org.eclipse.e4.core.di.suppliers.ExtendedObjectSupplier]
+	references = null
+	located in bundle = org.eclipse.e4.ui.di_1.0.0.v20140328-2112 [1443]
+]
+Component2: Component[
+	name = org.eclipse.e4.ui.di.events
+	activate = activate
+	deactivate = deactivate
+	modified = 
+	configuration-policy = optional
+	factory = null
+	autoenable = true
+	immediate = false
+	implementation = org.eclipse.e4.ui.internal.di.UIEventObjectSupplier
+	state = Unsatisfied
+	properties = {dependency.injection.annotation=org.eclipse.e4.ui.di.UIEventTopic}
+	serviceFactory = false
+	serviceInterface = [org.eclipse.e4.core.di.suppliers.ExtendedObjectSupplier]
+	references = null
+	located in bundle = org.eclipse.e4.ui.di_1.1.0.v20150422-0725 [790]
+]  
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2015-09-04 17:49:02.752
+!MESSAGE [SCR] Found components with duplicated names! Details: 
+Component1 : Component[
+	name = org.eclipse.equinox.p2.transport.ecf
+	activate = activate
+	deactivate = deactivate
+	modified = 
+	configuration-policy = optional
+	factory = null
+	autoenable = true
+	immediate = false
+	implementation = org.eclipse.equinox.internal.p2.transport.ecf.ECFTransportComponent
+	state = Unsatisfied
+	properties = {p2.agent.servicename=org.eclipse.equinox.internal.p2.repository.Transport}
+	serviceFactory = false
+	serviceInterface = [org.eclipse.equinox.p2.core.spi.IAgentServiceFactory]
+	references = null
+	located in bundle = org.eclipse.equinox.p2.transport.ecf_1.1.0.v20140408-1354 [1488]
+]
+Component2: Component[
+	name = org.eclipse.equinox.p2.transport.ecf
+	activate = activate
+	deactivate = deactivate
+	modified = 
+	configuration-policy = optional
+	factory = null
+	autoenable = true
+	immediate = false
+	implementation = org.eclipse.equinox.internal.p2.transport.ecf.ECFTransportComponent
+	state = Unsatisfied
+	properties = {p2.agent.servicename=org.eclipse.equinox.internal.p2.repository.Transport}
+	serviceFactory = false
+	serviceInterface = [org.eclipse.equinox.p2.core.spi.IAgentServiceFactory]
+	references = null
+	located in bundle = org.eclipse.equinox.p2.transport.ecf_1.1.100.v20150521-1342 [880]
+]  
+
+!ENTRY org.eclipse.ui 2 0 2015-09-04 17:49:51.568
+!MESSAGE Warnings while parsing the key bindings from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.bindings' extension point
+!SUBENTRY 1 org.eclipse.ui 2 0 2015-09-04 17:49:51.568
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.ui.tests', id='org.eclipse.ui.tests.TestCommandId'
+!SUBENTRY 1 org.eclipse.ui 2 0 2015-09-04 17:49:51.568
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.ui.tests', id='org.eclipse.ui.tests.TestCommandId'
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2015-09-04 17:49:51.615
+!MESSAGE Could not find element with id 'app.base'
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2015-09-04 17:49:51.615
+!MESSAGE Could not find element with id 'app.base.command'
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2015-09-04 17:49:51.740
+!MESSAGE Could not find element with id 'app.base'
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2015-09-04 17:49:51.755
+!MESSAGE Could not find element with id 'app.base.command'
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2015-09-04 17:49:51.755
+!MESSAGE Could not find element with id 'fragment.contributedWindow'
+
+!ENTRY org.eclipse.ui 4 4 2015-09-04 17:49:52.330
+!MESSAGE Invalid activity: missing a translatable name (contributed by 'org.eclipse.ui.tests')
+
+!ENTRY org.eclipse.ui 4 4 2015-09-04 17:49:52.330
+!MESSAGE Invalid activity: missing a unique identifier (contributed by 'org.eclipse.ui.tests')
+
+!ENTRY org.eclipse.ui 4 4 2015-09-04 17:49:52.330
+!MESSAGE Invalid category description: missing a translatable name (contributed by 'org.eclipse.ui.tests')
+
+!ENTRY org.eclipse.ui 4 4 2015-09-04 17:49:52.330
+!MESSAGE Invalid category description: has no ID (contributed by 'org.eclipse.ui.tests')
+
+!ENTRY org.eclipse.ui 4 4 2015-09-04 17:49:52.346
+!MESSAGE Invalid activity pattern binding: missing the pattern to be bound (contributed by 'org.eclipse.ui.tests')
+
+!ENTRY org.eclipse.ui 4 4 2015-09-04 17:49:52.346
+!MESSAGE Invalid activity requirement binding: missing ID of the required activity (contributed by 'org.eclipse.ui.tests')
+
+!ENTRY org.eclipse.ui 4 4 2015-09-04 17:49:52.346
+!MESSAGE Invalid category activity binding: missing the ID of the activity to bind (contributed by 'org.eclipse.ui.tests')
+
+!ENTRY org.eclipse.ui 2 0 2015-09-04 17:49:52.361
+!MESSAGE Expression activity cannot have requirements (id: org.eclipse.ui.tests.filter4.enabled)
+
+!ENTRY org.eclipse.ui 2 0 2015-09-04 17:49:52.361
+!MESSAGE Expression activity cannot be required (id: org.eclipse.ui.tests.filter7.enabled)
+
+!ENTRY org.eclipse.ui 2 2 2015-09-04 17:49:56.196
+!MESSAGE Could not parse value for theme color badColor3
+!STACK 0
+org.eclipse.jface.resource.DataFormatException: For input string: "1x"
+	at org.eclipse.jface.resource.StringConverter.asRGB(StringConverter.java:568)
+	at org.eclipse.ui.themes.ColorUtil.getColorValue(ColorUtil.java:174)
+	at org.eclipse.ui.internal.themes.ColorDefinition.getValue(ColorDefinition.java:111)
+	at org.eclipse.ui.internal.themes.ThemeElementHelper.installColor(ThemeElementHelper.java:305)
+	at org.eclipse.ui.internal.themes.ThemeElementHelper.populateRegistry(ThemeElementHelper.java:193)
+	at org.eclipse.ui.internal.Workbench$28.runWithException(Workbench.java:1748)
+	at org.eclipse.ui.internal.StartupThreading$StartupRunnable.run(StartupThreading.java:32)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4155)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3772)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2949)
+	at org.eclipse.ui.internal.Workbench.access$8(Workbench.java:2854)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:651)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:598)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+
+!ENTRY org.eclipse.ui.navigator 2 0 2015-09-04 17:50:08.786
+!MESSAGE Can't find Navigator Content Descriptor with id: org.eclipse.ui.tests.navigator.testTHISISNOTFOUND
+
+!ENTRY org.eclipse.ui.navigator 2 0 2015-09-04 17:50:08.786
+!MESSAGE Can't find Navigator Content Descriptor with id: org.eclipse.ui.tests.navigator.testTHISISNOTFOUND
+
+!ENTRY org.eclipse.ui.navigator 2 0 2015-09-04 17:50:10.133
+!MESSAGE There were unresolved dependencies for action provider extensions to a Common Navigator.
+Verify that the "dependsOn" attribute for each <actionProvider /> element is valid.
+Unresolved dependency specified for actionProvider: org.eclipse.ui.tests.navigator.extension.[If this menu option shows, it is an INTENTIONAL ERROR from org.eclipse.ui.tests.navigator! A warning SHOULD appear in the log!]
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-09-04 17:50:10.711
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-09-04 17:50:10.726
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Dave Yognaught'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.ui 2 0 2015-09-04 17:50:11.700
+!MESSAGE The 'org.eclipse.ui.startup' extension from 'org.eclipse.ui.tests' does not provide a 'class' attribute.
+This usage is deprecated and a 'class' attribute should be provided.
+The release after Mars (4.5) will no longer support the deprecated usage!
+
+!ENTRY org.eclipse.jface 2 0 2015-09-04 17:50:13.710
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2015-09-04 17:50:13.710
+!MESSAGE A conflict occurred for CTRL+5 K:
+Binding(CTRL+5 K,
+	ParameterizedCommand(Command(org.eclipse.ui.tests.keyModel.conflict1,Conflict1,
+		,
+		Category(org.eclipse.ui.tests.category.keyModel,Key Model,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@77ae2d25,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.dialog,,,system)
+Binding(CTRL+5 K,
+	ParameterizedCommand(Command(org.eclipse.ui.tests.keyModel.conflict2,Conflict2,
+		,
+		Category(org.eclipse.ui.tests.category.keyModel,Key Model,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3f13ab39,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.dialog,,,system)
+Binding(CTRL+5 K,
+	ParameterizedCommand(Command(org.eclipse.ui.tests.keyModel.conflict3,Conflict3,
+		,
+		Category(org.eclipse.ui.tests.category.keyModel,Key Model,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@54898111,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.dialog,,,system)
+
+!ENTRY org.eclipse.ui 2 0 2015-09-04 20:12:08.120
+!MESSAGE Warnings while parsing the key bindings from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.bindings' extension point
+!SUBENTRY 1 org.eclipse.ui 2 0 2015-09-04 20:12:08.120
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.ui.tests', id='org.eclipse.ui.tests.TestCommandId'
+!SUBENTRY 1 org.eclipse.ui 2 0 2015-09-04 20:12:08.120
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.ui.tests', id='org.eclipse.ui.tests.TestCommandId'
+
+!ENTRY org.eclipse.ui 2 2 2015-09-04 20:12:23.801
+!MESSAGE Invalid property category path: Test Category (bundle: org.eclipse.ui.tests, propertyPage: org.eclipse.ui.tests.and)
+
+!ENTRY org.eclipse.ui 2 2 2015-09-04 20:12:23.803
+!MESSAGE Invalid property category path: Test Category (bundle: org.eclipse.ui.tests, propertyPage: org.eclipse.ui.tests.or)
+!SESSION 2015-09-04 20:12:24.578 -----------------------------------------------
+eclipse.buildId=4.5.0.I20150603-2000
+java.version=1.8.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.e4.ui.di 2 0 2015-09-04 20:12:45.842
+!MESSAGE [SCR] Found components with duplicated names! Details: 
+Component1 : Component[
+	name = org.eclipse.e4.ui.di.events
+	activate = activate
+	deactivate = deactivate
+	modified = 
+	configuration-policy = optional
+	factory = null
+	autoenable = true
+	immediate = false
+	implementation = org.eclipse.e4.ui.internal.di.UIEventObjectSupplier
+	state = Unsatisfied
+	properties = {dependency.injection.annotation=org.eclipse.e4.ui.di.UIEventTopic}
+	serviceFactory = false
+	serviceInterface = [org.eclipse.e4.core.di.suppliers.ExtendedObjectSupplier]
+	references = null
+	located in bundle = org.eclipse.e4.ui.di_1.0.0.v20140328-2112 [1443]
+]
+Component2: Component[
+	name = org.eclipse.e4.ui.di.events
+	activate = activate
+	deactivate = deactivate
+	modified = 
+	configuration-policy = optional
+	factory = null
+	autoenable = true
+	immediate = false
+	implementation = org.eclipse.e4.ui.internal.di.UIEventObjectSupplier
+	state = Unsatisfied
+	properties = {dependency.injection.annotation=org.eclipse.e4.ui.di.UIEventTopic}
+	serviceFactory = false
+	serviceInterface = [org.eclipse.e4.core.di.suppliers.ExtendedObjectSupplier]
+	references = null
+	located in bundle = org.eclipse.e4.ui.di_1.1.0.v20150422-0725 [790]
+]  
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2015-09-04 20:12:45.857
+!MESSAGE [SCR] Found components with duplicated names! Details: 
+Component1 : Component[
+	name = org.eclipse.equinox.p2.transport.ecf
+	activate = activate
+	deactivate = deactivate
+	modified = 
+	configuration-policy = optional
+	factory = null
+	autoenable = true
+	immediate = false
+	implementation = org.eclipse.equinox.internal.p2.transport.ecf.ECFTransportComponent
+	state = Unsatisfied
+	properties = {p2.agent.servicename=org.eclipse.equinox.internal.p2.repository.Transport}
+	serviceFactory = false
+	serviceInterface = [org.eclipse.equinox.p2.core.spi.IAgentServiceFactory]
+	references = null
+	located in bundle = org.eclipse.equinox.p2.transport.ecf_1.1.0.v20140408-1354 [1488]
+]
+Component2: Component[
+	name = org.eclipse.equinox.p2.transport.ecf
+	activate = activate
+	deactivate = deactivate
+	modified = 
+	configuration-policy = optional
+	factory = null
+	autoenable = true
+	immediate = false
+	implementation = org.eclipse.equinox.internal.p2.transport.ecf.ECFTransportComponent
+	state = Unsatisfied
+	properties = {p2.agent.servicename=org.eclipse.equinox.internal.p2.repository.Transport}
+	serviceFactory = false
+	serviceInterface = [org.eclipse.equinox.p2.core.spi.IAgentServiceFactory]
+	references = null
+	located in bundle = org.eclipse.equinox.p2.transport.ecf_1.1.100.v20150521-1342 [880]
+]  
+
+!ENTRY org.eclipse.ui 2 0 2015-09-04 20:12:58.348
+!MESSAGE Warnings while parsing the key bindings from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.bindings' extension point
+!SUBENTRY 1 org.eclipse.ui 2 0 2015-09-04 20:12:58.348
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.ui.tests', id='org.eclipse.ui.tests.TestCommandId'
+!SUBENTRY 1 org.eclipse.ui 2 0 2015-09-04 20:12:58.348
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.ui.tests', id='org.eclipse.ui.tests.TestCommandId'
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2015-09-04 20:12:58.395
+!MESSAGE Could not find element with id 'app.base'
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2015-09-04 20:12:58.395
+!MESSAGE Could not find element with id 'app.base.command'
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2015-09-04 20:12:58.551
+!MESSAGE Could not find element with id 'app.base'
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2015-09-04 20:12:58.551
+!MESSAGE Could not find element with id 'app.base.command'
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2015-09-04 20:12:58.551
+!MESSAGE Could not find element with id 'fragment.contributedWindow'
+
+!ENTRY org.eclipse.ui 4 4 2015-09-04 20:12:58.832
+!MESSAGE Invalid activity: missing a translatable name (contributed by 'org.eclipse.ui.tests')
+
+!ENTRY org.eclipse.ui 4 4 2015-09-04 20:12:58.832
+!MESSAGE Invalid activity: missing a unique identifier (contributed by 'org.eclipse.ui.tests')
+
+!ENTRY org.eclipse.ui 4 4 2015-09-04 20:12:58.832
+!MESSAGE Invalid category description: missing a translatable name (contributed by 'org.eclipse.ui.tests')
+
+!ENTRY org.eclipse.ui 4 4 2015-09-04 20:12:58.832
+!MESSAGE Invalid category description: has no ID (contributed by 'org.eclipse.ui.tests')
+
+!ENTRY org.eclipse.ui 4 4 2015-09-04 20:12:58.832
+!MESSAGE Invalid activity pattern binding: missing the pattern to be bound (contributed by 'org.eclipse.ui.tests')
+
+!ENTRY org.eclipse.ui 4 4 2015-09-04 20:12:58.832
+!MESSAGE Invalid activity requirement binding: missing ID of the required activity (contributed by 'org.eclipse.ui.tests')
+
+!ENTRY org.eclipse.ui 4 4 2015-09-04 20:12:58.848
+!MESSAGE Invalid category activity binding: missing the ID of the activity to bind (contributed by 'org.eclipse.ui.tests')
+
+!ENTRY org.eclipse.ui 2 0 2015-09-04 20:12:58.848
+!MESSAGE Expression activity cannot have requirements (id: org.eclipse.ui.tests.filter4.enabled)
+
+!ENTRY org.eclipse.ui 2 0 2015-09-04 20:12:58.848
+!MESSAGE Expression activity cannot be required (id: org.eclipse.ui.tests.filter7.enabled)
+
+!ENTRY org.eclipse.ui 2 2 2015-09-04 20:13:00.339
+!MESSAGE Could not parse value for theme color badColor3
+!STACK 0
+org.eclipse.jface.resource.DataFormatException: For input string: "1x"
+	at org.eclipse.jface.resource.StringConverter.asRGB(StringConverter.java:568)
+	at org.eclipse.ui.themes.ColorUtil.getColorValue(ColorUtil.java:174)
+	at org.eclipse.ui.internal.themes.ColorDefinition.getValue(ColorDefinition.java:111)
+	at org.eclipse.ui.internal.themes.ThemeElementHelper.installColor(ThemeElementHelper.java:305)
+	at org.eclipse.ui.internal.themes.ThemeElementHelper.populateRegistry(ThemeElementHelper.java:193)
+	at org.eclipse.ui.internal.Workbench$28.runWithException(Workbench.java:1748)
+	at org.eclipse.ui.internal.StartupThreading$StartupRunnable.run(StartupThreading.java:32)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4155)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3772)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2949)
+	at org.eclipse.ui.internal.Workbench.access$8(Workbench.java:2854)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:651)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:598)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-09-04 20:13:06.645
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-09-04 20:13:06.645
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Dave Yognaught'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.ui 2 0 2015-09-04 20:13:08.184
+!MESSAGE The 'org.eclipse.ui.startup' extension from 'org.eclipse.ui.tests' does not provide a 'class' attribute.
+This usage is deprecated and a 'class' attribute should be provided.
+The release after Mars (4.5) will no longer support the deprecated usage!
+
+!ENTRY org.eclipse.jface 2 0 2015-09-04 20:13:34.877
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2015-09-04 20:13:34.877
+!MESSAGE A conflict occurred for CTRL+5 K:
+Binding(CTRL+5 K,
+	ParameterizedCommand(Command(org.eclipse.ui.tests.keyModel.conflict1,Conflict1,
+		,
+		Category(org.eclipse.ui.tests.category.keyModel,Key Model,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6b96af8d,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.dialog,,,system)
+Binding(CTRL+5 K,
+	ParameterizedCommand(Command(org.eclipse.ui.tests.keyModel.conflict2,Conflict2,
+		,
+		Category(org.eclipse.ui.tests.category.keyModel,Key Model,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@62ec0967,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.dialog,,,system)
+Binding(CTRL+5 K,
+	ParameterizedCommand(Command(org.eclipse.ui.tests.keyModel.conflict3,Conflict3,
+		,
+		Category(org.eclipse.ui.tests.category.keyModel,Key Model,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@74cc987a,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.dialog,,,system)
+
+!ENTRY org.eclipse.ui 2 2 2015-09-04 22:07:33.297
+!MESSAGE Could not parse value for theme color badColor3
+!STACK 0
+org.eclipse.jface.resource.DataFormatException: For input string: "1x"
+	at org.eclipse.jface.resource.StringConverter.asRGB(StringConverter.java:568)
+	at org.eclipse.ui.themes.ColorUtil.getColorValue(ColorUtil.java:174)
+	at org.eclipse.ui.internal.themes.ColorDefinition.getValue(ColorDefinition.java:111)
+	at org.eclipse.ui.internal.themes.ThemeElementHelper.installColor(ThemeElementHelper.java:305)
+	at org.eclipse.ui.internal.themes.ThemeElementHelper.populateRegistry(ThemeElementHelper.java:193)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager.updateThemes(WorkbenchThemeManager.java:191)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager.access$2(WorkbenchThemeManager.java:185)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager$2.handleEvent(WorkbenchThemeManager.java:159)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4362)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4354)
+	at org.eclipse.swt.widgets.Display.runSettings(Display.java:4232)
+	at org.eclipse.swt.widgets.Display.messageProc(Display.java:3366)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2549)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3767)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:654)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:598)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+
+!ENTRY org.eclipse.ui 2 2 2015-09-04 22:07:41.401
+!MESSAGE Could not parse value for theme color badColor3
+!STACK 0
+org.eclipse.jface.resource.DataFormatException: For input string: "1x"
+	at org.eclipse.jface.resource.StringConverter.asRGB(StringConverter.java:568)
+	at org.eclipse.ui.themes.ColorUtil.getColorValue(ColorUtil.java:174)
+	at org.eclipse.ui.internal.themes.ColorDefinition.getValue(ColorDefinition.java:111)
+	at org.eclipse.ui.internal.themes.ThemeElementHelper.installColor(ThemeElementHelper.java:305)
+	at org.eclipse.ui.internal.themes.ThemeElementHelper.populateRegistry(ThemeElementHelper.java:193)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager.updateThemes(WorkbenchThemeManager.java:191)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager.access$2(WorkbenchThemeManager.java:185)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager$2.handleEvent(WorkbenchThemeManager.java:159)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4362)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4354)
+	at org.eclipse.swt.widgets.Display.runSettings(Display.java:4232)
+	at org.eclipse.swt.widgets.Display.messageProc(Display.java:3366)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2549)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3767)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:654)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:598)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+
+!ENTRY org.eclipse.ui 2 2 2015-09-04 22:52:10.962
+!MESSAGE Could not parse value for theme color badColor3
+!STACK 0
+org.eclipse.jface.resource.DataFormatException: For input string: "1x"
+	at org.eclipse.jface.resource.StringConverter.asRGB(StringConverter.java:568)
+	at org.eclipse.ui.themes.ColorUtil.getColorValue(ColorUtil.java:174)
+	at org.eclipse.ui.internal.themes.ColorDefinition.getValue(ColorDefinition.java:111)
+	at org.eclipse.ui.internal.themes.ThemeElementHelper.installColor(ThemeElementHelper.java:305)
+	at org.eclipse.ui.internal.themes.ThemeElementHelper.populateRegistry(ThemeElementHelper.java:193)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager.updateThemes(WorkbenchThemeManager.java:191)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager.access$2(WorkbenchThemeManager.java:185)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager$2.handleEvent(WorkbenchThemeManager.java:159)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4362)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4354)
+	at org.eclipse.swt.widgets.Display.runSettings(Display.java:4232)
+	at org.eclipse.swt.widgets.Display.messageProc(Display.java:3366)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2549)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3767)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:654)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:598)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+
+!ENTRY org.eclipse.ui 2 2 2015-09-04 22:53:04.400
+!MESSAGE Could not parse value for theme color badColor3
+!STACK 0
+org.eclipse.jface.resource.DataFormatException: For input string: "1x"
+	at org.eclipse.jface.resource.StringConverter.asRGB(StringConverter.java:568)
+	at org.eclipse.ui.themes.ColorUtil.getColorValue(ColorUtil.java:174)
+	at org.eclipse.ui.internal.themes.ColorDefinition.getValue(ColorDefinition.java:111)
+	at org.eclipse.ui.internal.themes.ThemeElementHelper.installColor(ThemeElementHelper.java:305)
+	at org.eclipse.ui.internal.themes.ThemeElementHelper.populateRegistry(ThemeElementHelper.java:193)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager.updateThemes(WorkbenchThemeManager.java:191)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager.access$2(WorkbenchThemeManager.java:185)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager$2.handleEvent(WorkbenchThemeManager.java:159)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4362)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4354)
+	at org.eclipse.swt.widgets.Display.runSettings(Display.java:4232)
+	at org.eclipse.swt.widgets.Display.messageProc(Display.java:3366)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2549)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3767)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:654)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:598)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+
+!ENTRY org.eclipse.ui 2 2 2015-09-04 22:53:13.228
+!MESSAGE Could not parse value for theme color badColor3
+!STACK 0
+org.eclipse.jface.resource.DataFormatException: For input string: "1x"
+	at org.eclipse.jface.resource.StringConverter.asRGB(StringConverter.java:568)
+	at org.eclipse.ui.themes.ColorUtil.getColorValue(ColorUtil.java:174)
+	at org.eclipse.ui.internal.themes.ColorDefinition.getValue(ColorDefinition.java:111)
+	at org.eclipse.ui.internal.themes.ThemeElementHelper.installColor(ThemeElementHelper.java:305)
+	at org.eclipse.ui.internal.themes.ThemeElementHelper.populateRegistry(ThemeElementHelper.java:193)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager.updateThemes(WorkbenchThemeManager.java:191)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager.access$2(WorkbenchThemeManager.java:185)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager$2.handleEvent(WorkbenchThemeManager.java:159)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4362)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4354)
+	at org.eclipse.swt.widgets.Display.runSettings(Display.java:4232)
+	at org.eclipse.swt.widgets.Display.messageProc(Display.java:3366)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2549)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3767)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:654)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:598)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+
+!ENTRY org.eclipse.ui 2 2 2015-09-04 22:53:19.761
+!MESSAGE Could not parse value for theme color badColor3
+!STACK 0
+org.eclipse.jface.resource.DataFormatException: For input string: "1x"
+	at org.eclipse.jface.resource.StringConverter.asRGB(StringConverter.java:568)
+	at org.eclipse.ui.themes.ColorUtil.getColorValue(ColorUtil.java:174)
+	at org.eclipse.ui.internal.themes.ColorDefinition.getValue(ColorDefinition.java:111)
+	at org.eclipse.ui.internal.themes.ThemeElementHelper.installColor(ThemeElementHelper.java:305)
+	at org.eclipse.ui.internal.themes.ThemeElementHelper.populateRegistry(ThemeElementHelper.java:193)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager.updateThemes(WorkbenchThemeManager.java:191)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager.access$2(WorkbenchThemeManager.java:185)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager$2.handleEvent(WorkbenchThemeManager.java:159)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4362)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4354)
+	at org.eclipse.swt.widgets.Display.runSettings(Display.java:4232)
+	at org.eclipse.swt.widgets.Display.messageProc(Display.java:3366)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2549)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3767)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:654)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:598)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+
+!ENTRY org.eclipse.ui 2 2 2015-09-04 22:53:22.414
+!MESSAGE Could not parse value for theme color badColor3
+!STACK 0
+org.eclipse.jface.resource.DataFormatException: For input string: "1x"
+	at org.eclipse.jface.resource.StringConverter.asRGB(StringConverter.java:568)
+	at org.eclipse.ui.themes.ColorUtil.getColorValue(ColorUtil.java:174)
+	at org.eclipse.ui.internal.themes.ColorDefinition.getValue(ColorDefinition.java:111)
+	at org.eclipse.ui.internal.themes.ThemeElementHelper.installColor(ThemeElementHelper.java:305)
+	at org.eclipse.ui.internal.themes.ThemeElementHelper.populateRegistry(ThemeElementHelper.java:193)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager.updateThemes(WorkbenchThemeManager.java:191)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager.access$2(WorkbenchThemeManager.java:185)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager$2.handleEvent(WorkbenchThemeManager.java:159)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4362)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4354)
+	at org.eclipse.swt.widgets.Display.runSettings(Display.java:4232)
+	at org.eclipse.swt.widgets.Display.messageProc(Display.java:3366)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2549)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3767)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:654)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:598)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+
+!ENTRY org.eclipse.ui 2 2 2015-09-04 22:53:26.945
+!MESSAGE Could not parse value for theme color badColor3
+!STACK 0
+org.eclipse.jface.resource.DataFormatException: For input string: "1x"
+	at org.eclipse.jface.resource.StringConverter.asRGB(StringConverter.java:568)
+	at org.eclipse.ui.themes.ColorUtil.getColorValue(ColorUtil.java:174)
+	at org.eclipse.ui.internal.themes.ColorDefinition.getValue(ColorDefinition.java:111)
+	at org.eclipse.ui.internal.themes.ThemeElementHelper.installColor(ThemeElementHelper.java:305)
+	at org.eclipse.ui.internal.themes.ThemeElementHelper.populateRegistry(ThemeElementHelper.java:193)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager.updateThemes(WorkbenchThemeManager.java:191)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager.access$2(WorkbenchThemeManager.java:185)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager$2.handleEvent(WorkbenchThemeManager.java:159)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4362)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4354)
+	at org.eclipse.swt.widgets.Display.runSettings(Display.java:4232)
+	at org.eclipse.swt.widgets.Display.messageProc(Display.java:3366)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2549)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3767)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:654)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:598)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+
+!ENTRY org.eclipse.ui 2 2 2015-09-04 22:53:55.621
+!MESSAGE Could not parse value for theme color badColor3
+!STACK 0
+org.eclipse.jface.resource.DataFormatException: For input string: "1x"
+	at org.eclipse.jface.resource.StringConverter.asRGB(StringConverter.java:568)
+	at org.eclipse.ui.themes.ColorUtil.getColorValue(ColorUtil.java:174)
+	at org.eclipse.ui.internal.themes.ColorDefinition.getValue(ColorDefinition.java:111)
+	at org.eclipse.ui.internal.themes.ThemeElementHelper.installColor(ThemeElementHelper.java:305)
+	at org.eclipse.ui.internal.themes.ThemeElementHelper.populateRegistry(ThemeElementHelper.java:193)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager.updateThemes(WorkbenchThemeManager.java:191)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager.access$2(WorkbenchThemeManager.java:185)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager$2.handleEvent(WorkbenchThemeManager.java:159)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4362)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4354)
+	at org.eclipse.swt.widgets.Display.runSettings(Display.java:4232)
+	at org.eclipse.swt.widgets.Display.messageProc(Display.java:3366)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2549)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3767)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:654)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:598)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+
+!ENTRY org.eclipse.ui 2 2 2015-09-04 23:08:19.450
+!MESSAGE Could not parse value for theme color badColor3
+!STACK 0
+org.eclipse.jface.resource.DataFormatException: For input string: "1x"
+	at org.eclipse.jface.resource.StringConverter.asRGB(StringConverter.java:568)
+	at org.eclipse.ui.themes.ColorUtil.getColorValue(ColorUtil.java:174)
+	at org.eclipse.ui.internal.themes.ColorDefinition.getValue(ColorDefinition.java:111)
+	at org.eclipse.ui.internal.themes.ThemeElementHelper.installColor(ThemeElementHelper.java:305)
+	at org.eclipse.ui.internal.themes.ThemeElementHelper.populateRegistry(ThemeElementHelper.java:193)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager.updateThemes(WorkbenchThemeManager.java:191)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager.access$2(WorkbenchThemeManager.java:185)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager$2.handleEvent(WorkbenchThemeManager.java:159)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4362)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4354)
+	at org.eclipse.swt.widgets.Display.runSettings(Display.java:4232)
+	at org.eclipse.swt.widgets.Display.messageProc(Display.java:3366)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2549)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3767)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:654)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:598)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+
+!ENTRY org.eclipse.ui 2 2 2015-09-05 08:39:26.105
+!MESSAGE Could not parse value for theme color badColor3
+!STACK 0
+org.eclipse.jface.resource.DataFormatException: For input string: "1x"
+	at org.eclipse.jface.resource.StringConverter.asRGB(StringConverter.java:568)
+	at org.eclipse.ui.themes.ColorUtil.getColorValue(ColorUtil.java:174)
+	at org.eclipse.ui.internal.themes.ColorDefinition.getValue(ColorDefinition.java:111)
+	at org.eclipse.ui.internal.themes.ThemeElementHelper.installColor(ThemeElementHelper.java:305)
+	at org.eclipse.ui.internal.themes.ThemeElementHelper.populateRegistry(ThemeElementHelper.java:193)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager.updateThemes(WorkbenchThemeManager.java:191)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager.access$2(WorkbenchThemeManager.java:185)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager$2.handleEvent(WorkbenchThemeManager.java:159)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4362)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4354)
+	at org.eclipse.swt.widgets.Display.runSettings(Display.java:4232)
+	at org.eclipse.swt.widgets.Display.messageProc(Display.java:3366)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2549)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3767)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:654)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:598)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+
+!ENTRY org.eclipse.ui 2 2 2015-09-05 08:39:51.121
+!MESSAGE Could not parse value for theme color badColor3
+!STACK 0
+org.eclipse.jface.resource.DataFormatException: For input string: "1x"
+	at org.eclipse.jface.resource.StringConverter.asRGB(StringConverter.java:568)
+	at org.eclipse.ui.themes.ColorUtil.getColorValue(ColorUtil.java:174)
+	at org.eclipse.ui.internal.themes.ColorDefinition.getValue(ColorDefinition.java:111)
+	at org.eclipse.ui.internal.themes.ThemeElementHelper.installColor(ThemeElementHelper.java:305)
+	at org.eclipse.ui.internal.themes.ThemeElementHelper.populateRegistry(ThemeElementHelper.java:193)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager.updateThemes(WorkbenchThemeManager.java:191)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager.access$2(WorkbenchThemeManager.java:185)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager$2.handleEvent(WorkbenchThemeManager.java:159)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4362)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4354)
+	at org.eclipse.swt.widgets.Display.runSettings(Display.java:4232)
+	at org.eclipse.swt.widgets.Display.messageProc(Display.java:3366)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2549)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3767)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:654)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:598)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+
+!ENTRY org.eclipse.ui 2 2 2015-09-05 08:40:01.617
+!MESSAGE Could not parse value for theme color badColor3
+!STACK 0
+org.eclipse.jface.resource.DataFormatException: For input string: "1x"
+	at org.eclipse.jface.resource.StringConverter.asRGB(StringConverter.java:568)
+	at org.eclipse.ui.themes.ColorUtil.getColorValue(ColorUtil.java:174)
+	at org.eclipse.ui.internal.themes.ColorDefinition.getValue(ColorDefinition.java:111)
+	at org.eclipse.ui.internal.themes.ThemeElementHelper.installColor(ThemeElementHelper.java:305)
+	at org.eclipse.ui.internal.themes.ThemeElementHelper.populateRegistry(ThemeElementHelper.java:193)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager.updateThemes(WorkbenchThemeManager.java:191)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager.access$2(WorkbenchThemeManager.java:185)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager$2.handleEvent(WorkbenchThemeManager.java:159)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4362)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4354)
+	at org.eclipse.swt.widgets.Display.runSettings(Display.java:4232)
+	at org.eclipse.swt.widgets.Display.messageProc(Display.java:3366)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2549)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3767)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:654)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:598)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+
+!ENTRY org.eclipse.ui 2 2 2015-09-05 08:40:08.712
+!MESSAGE Could not parse value for theme color badColor3
+!STACK 0
+org.eclipse.jface.resource.DataFormatException: For input string: "1x"
+	at org.eclipse.jface.resource.StringConverter.asRGB(StringConverter.java:568)
+	at org.eclipse.ui.themes.ColorUtil.getColorValue(ColorUtil.java:174)
+	at org.eclipse.ui.internal.themes.ColorDefinition.getValue(ColorDefinition.java:111)
+	at org.eclipse.ui.internal.themes.ThemeElementHelper.installColor(ThemeElementHelper.java:305)
+	at org.eclipse.ui.internal.themes.ThemeElementHelper.populateRegistry(ThemeElementHelper.java:193)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager.updateThemes(WorkbenchThemeManager.java:191)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager.access$2(WorkbenchThemeManager.java:185)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager$2.handleEvent(WorkbenchThemeManager.java:159)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4362)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4354)
+	at org.eclipse.swt.widgets.Display.runSettings(Display.java:4232)
+	at org.eclipse.swt.widgets.Display.messageProc(Display.java:3366)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2549)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3767)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:654)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:598)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+
+!ENTRY org.eclipse.ui 2 2 2015-09-05 09:16:54.666
+!MESSAGE Invalid property category path: Test Category (bundle: org.eclipse.ui.tests, propertyPage: org.eclipse.ui.tests.and)
+
+!ENTRY org.eclipse.ui 2 2 2015-09-05 09:16:54.686
+!MESSAGE Invalid property category path: Test Category (bundle: org.eclipse.ui.tests, propertyPage: org.eclipse.ui.tests.or)
+
+!ENTRY org.eclipse.ui 4 4 2015-09-05 09:16:54.958
+!MESSAGE Blorf is not a valid charset.
+
+!ENTRY org.eclipse.ui 4 4 2015-09-05 09:16:54.960
+!MESSAGE  is not a valid charset.
+
+!ENTRY org.eclipse.ui 2 2 2015-09-05 18:57:30.940
+!MESSAGE Could not parse value for theme color badColor3
+!STACK 0
+org.eclipse.jface.resource.DataFormatException: For input string: "1x"
+	at org.eclipse.jface.resource.StringConverter.asRGB(StringConverter.java:568)
+	at org.eclipse.ui.themes.ColorUtil.getColorValue(ColorUtil.java:174)
+	at org.eclipse.ui.internal.themes.ColorDefinition.getValue(ColorDefinition.java:111)
+	at org.eclipse.ui.internal.themes.ThemeElementHelper.installColor(ThemeElementHelper.java:305)
+	at org.eclipse.ui.internal.themes.ThemeElementHelper.populateRegistry(ThemeElementHelper.java:193)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager.updateThemes(WorkbenchThemeManager.java:191)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager.access$2(WorkbenchThemeManager.java:185)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager$2.handleEvent(WorkbenchThemeManager.java:159)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4362)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4354)
+	at org.eclipse.swt.widgets.Display.runSettings(Display.java:4232)
+	at org.eclipse.swt.widgets.Display.messageProc(Display.java:3366)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2549)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3767)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:654)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:598)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+
+!ENTRY org.eclipse.ui 2 2 2015-09-05 18:57:41.993
+!MESSAGE Could not parse value for theme color badColor3
+!STACK 0
+org.eclipse.jface.resource.DataFormatException: For input string: "1x"
+	at org.eclipse.jface.resource.StringConverter.asRGB(StringConverter.java:568)
+	at org.eclipse.ui.themes.ColorUtil.getColorValue(ColorUtil.java:174)
+	at org.eclipse.ui.internal.themes.ColorDefinition.getValue(ColorDefinition.java:111)
+	at org.eclipse.ui.internal.themes.ThemeElementHelper.installColor(ThemeElementHelper.java:305)
+	at org.eclipse.ui.internal.themes.ThemeElementHelper.populateRegistry(ThemeElementHelper.java:193)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager.updateThemes(WorkbenchThemeManager.java:191)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager.access$2(WorkbenchThemeManager.java:185)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager$2.handleEvent(WorkbenchThemeManager.java:159)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4362)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4354)
+	at org.eclipse.swt.widgets.Display.runSettings(Display.java:4232)
+	at org.eclipse.swt.widgets.Display.messageProc(Display.java:3366)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2549)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3767)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:654)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:598)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+
+!ENTRY org.eclipse.ui 2 2 2015-09-06 09:28:29.845
+!MESSAGE Could not parse value for theme color badColor3
+!STACK 0
+org.eclipse.jface.resource.DataFormatException: For input string: "1x"
+	at org.eclipse.jface.resource.StringConverter.asRGB(StringConverter.java:568)
+	at org.eclipse.ui.themes.ColorUtil.getColorValue(ColorUtil.java:174)
+	at org.eclipse.ui.internal.themes.ColorDefinition.getValue(ColorDefinition.java:111)
+	at org.eclipse.ui.internal.themes.ThemeElementHelper.installColor(ThemeElementHelper.java:305)
+	at org.eclipse.ui.internal.themes.ThemeElementHelper.populateRegistry(ThemeElementHelper.java:193)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager.updateThemes(WorkbenchThemeManager.java:191)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager.access$2(WorkbenchThemeManager.java:185)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager$2.handleEvent(WorkbenchThemeManager.java:159)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4362)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4354)
+	at org.eclipse.swt.widgets.Display.runSettings(Display.java:4232)
+	at org.eclipse.swt.widgets.Display.messageProc(Display.java:3366)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2549)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3767)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:654)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:598)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+
+!ENTRY org.eclipse.ui 2 2 2015-09-06 09:28:46.732
+!MESSAGE Could not parse value for theme color badColor3
+!STACK 0
+org.eclipse.jface.resource.DataFormatException: For input string: "1x"
+	at org.eclipse.jface.resource.StringConverter.asRGB(StringConverter.java:568)
+	at org.eclipse.ui.themes.ColorUtil.getColorValue(ColorUtil.java:174)
+	at org.eclipse.ui.internal.themes.ColorDefinition.getValue(ColorDefinition.java:111)
+	at org.eclipse.ui.internal.themes.ThemeElementHelper.installColor(ThemeElementHelper.java:305)
+	at org.eclipse.ui.internal.themes.ThemeElementHelper.populateRegistry(ThemeElementHelper.java:193)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager.updateThemes(WorkbenchThemeManager.java:191)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager.access$2(WorkbenchThemeManager.java:185)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager$2.handleEvent(WorkbenchThemeManager.java:159)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4362)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4354)
+	at org.eclipse.swt.widgets.Display.runSettings(Display.java:4232)
+	at org.eclipse.swt.widgets.Display.messageProc(Display.java:3366)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2549)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3767)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:654)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:598)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+
+!ENTRY org.eclipse.ui 2 2 2015-09-06 12:52:32.231
+!MESSAGE Could not parse value for theme color badColor3
+!STACK 0
+org.eclipse.jface.resource.DataFormatException: For input string: "1x"
+	at org.eclipse.jface.resource.StringConverter.asRGB(StringConverter.java:568)
+	at org.eclipse.ui.themes.ColorUtil.getColorValue(ColorUtil.java:174)
+	at org.eclipse.ui.internal.themes.ColorDefinition.getValue(ColorDefinition.java:111)
+	at org.eclipse.ui.internal.themes.ThemeElementHelper.installColor(ThemeElementHelper.java:305)
+	at org.eclipse.ui.internal.themes.ThemeElementHelper.populateRegistry(ThemeElementHelper.java:193)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager.updateThemes(WorkbenchThemeManager.java:191)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager.access$2(WorkbenchThemeManager.java:185)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager$2.handleEvent(WorkbenchThemeManager.java:159)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4362)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4354)
+	at org.eclipse.swt.widgets.Display.runSettings(Display.java:4232)
+	at org.eclipse.swt.widgets.Display.messageProc(Display.java:3366)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2549)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3767)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:654)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:598)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+
+!ENTRY org.eclipse.ui 2 2 2015-09-06 12:52:42.102
+!MESSAGE Could not parse value for theme color badColor3
+!STACK 0
+org.eclipse.jface.resource.DataFormatException: For input string: "1x"
+	at org.eclipse.jface.resource.StringConverter.asRGB(StringConverter.java:568)
+	at org.eclipse.ui.themes.ColorUtil.getColorValue(ColorUtil.java:174)
+	at org.eclipse.ui.internal.themes.ColorDefinition.getValue(ColorDefinition.java:111)
+	at org.eclipse.ui.internal.themes.ThemeElementHelper.installColor(ThemeElementHelper.java:305)
+	at org.eclipse.ui.internal.themes.ThemeElementHelper.populateRegistry(ThemeElementHelper.java:193)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager.updateThemes(WorkbenchThemeManager.java:191)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager.access$2(WorkbenchThemeManager.java:185)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager$2.handleEvent(WorkbenchThemeManager.java:159)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4362)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4354)
+	at org.eclipse.swt.widgets.Display.runSettings(Display.java:4232)
+	at org.eclipse.swt.widgets.Display.messageProc(Display.java:3366)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2549)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3767)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:654)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:598)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+
+!ENTRY org.eclipse.ui 2 2 2015-09-06 13:08:43.088
+!MESSAGE Could not parse value for theme color badColor3
+!STACK 0
+org.eclipse.jface.resource.DataFormatException: For input string: "1x"
+	at org.eclipse.jface.resource.StringConverter.asRGB(StringConverter.java:568)
+	at org.eclipse.ui.themes.ColorUtil.getColorValue(ColorUtil.java:174)
+	at org.eclipse.ui.internal.themes.ColorDefinition.getValue(ColorDefinition.java:111)
+	at org.eclipse.ui.internal.themes.ThemeElementHelper.installColor(ThemeElementHelper.java:305)
+	at org.eclipse.ui.internal.themes.ThemeElementHelper.populateRegistry(ThemeElementHelper.java:193)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager.updateThemes(WorkbenchThemeManager.java:191)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager.access$2(WorkbenchThemeManager.java:185)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager$2.handleEvent(WorkbenchThemeManager.java:159)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4362)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4354)
+	at org.eclipse.swt.widgets.Display.runSettings(Display.java:4232)
+	at org.eclipse.swt.widgets.Display.messageProc(Display.java:3366)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2549)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3767)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:654)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:598)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+
+!ENTRY org.eclipse.ui 2 2 2015-09-06 13:08:49.289
+!MESSAGE Could not parse value for theme color badColor3
+!STACK 0
+org.eclipse.jface.resource.DataFormatException: For input string: "1x"
+	at org.eclipse.jface.resource.StringConverter.asRGB(StringConverter.java:568)
+	at org.eclipse.ui.themes.ColorUtil.getColorValue(ColorUtil.java:174)
+	at org.eclipse.ui.internal.themes.ColorDefinition.getValue(ColorDefinition.java:111)
+	at org.eclipse.ui.internal.themes.ThemeElementHelper.installColor(ThemeElementHelper.java:305)
+	at org.eclipse.ui.internal.themes.ThemeElementHelper.populateRegistry(ThemeElementHelper.java:193)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager.updateThemes(WorkbenchThemeManager.java:191)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager.access$2(WorkbenchThemeManager.java:185)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager$2.handleEvent(WorkbenchThemeManager.java:159)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4362)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4354)
+	at org.eclipse.swt.widgets.Display.runSettings(Display.java:4232)
+	at org.eclipse.swt.widgets.Display.messageProc(Display.java:3366)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2549)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3767)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:654)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:598)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+
+!ENTRY org.eclipse.ui 2 2 2015-09-07 09:19:29.197
+!MESSAGE Could not parse value for theme color badColor3
+!STACK 0
+org.eclipse.jface.resource.DataFormatException: For input string: "1x"
+	at org.eclipse.jface.resource.StringConverter.asRGB(StringConverter.java:568)
+	at org.eclipse.ui.themes.ColorUtil.getColorValue(ColorUtil.java:174)
+	at org.eclipse.ui.internal.themes.ColorDefinition.getValue(ColorDefinition.java:111)
+	at org.eclipse.ui.internal.themes.ThemeElementHelper.installColor(ThemeElementHelper.java:305)
+	at org.eclipse.ui.internal.themes.ThemeElementHelper.populateRegistry(ThemeElementHelper.java:193)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager.updateThemes(WorkbenchThemeManager.java:191)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager.access$2(WorkbenchThemeManager.java:185)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager$2.handleEvent(WorkbenchThemeManager.java:159)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4362)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4354)
+	at org.eclipse.swt.widgets.Display.runSettings(Display.java:4232)
+	at org.eclipse.swt.widgets.Display.messageProc(Display.java:3366)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2549)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3767)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:654)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:598)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+
+!ENTRY org.eclipse.ui 2 2 2015-09-07 09:20:41.385
+!MESSAGE Could not parse value for theme color badColor3
+!STACK 0
+org.eclipse.jface.resource.DataFormatException: For input string: "1x"
+	at org.eclipse.jface.resource.StringConverter.asRGB(StringConverter.java:568)
+	at org.eclipse.ui.themes.ColorUtil.getColorValue(ColorUtil.java:174)
+	at org.eclipse.ui.internal.themes.ColorDefinition.getValue(ColorDefinition.java:111)
+	at org.eclipse.ui.internal.themes.ThemeElementHelper.installColor(ThemeElementHelper.java:305)
+	at org.eclipse.ui.internal.themes.ThemeElementHelper.populateRegistry(ThemeElementHelper.java:193)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager.updateThemes(WorkbenchThemeManager.java:191)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager.access$2(WorkbenchThemeManager.java:185)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager$2.handleEvent(WorkbenchThemeManager.java:159)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4362)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4354)
+	at org.eclipse.swt.widgets.Display.runSettings(Display.java:4232)
+	at org.eclipse.swt.widgets.Display.messageProc(Display.java:3366)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2549)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3767)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:654)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:598)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+
+!ENTRY org.eclipse.ui 4 4 2015-09-07 09:34:05.410
+!MESSAGE Blorf is not a valid charset.
+
+!ENTRY org.eclipse.ui 4 4 2015-09-07 09:34:05.485
+!MESSAGE  is not a valid charset.
+
+!ENTRY org.eclipse.ui 4 4 2015-09-07 09:34:15.512
+!MESSAGE Blorf is not a valid charset.
+
+!ENTRY org.eclipse.ui 4 4 2015-09-07 09:34:15.514
+!MESSAGE  is not a valid charset.
+
+!ENTRY org.eclipse.ui 2 2 2015-09-07 15:55:28.966
+!MESSAGE Could not parse value for theme color badColor3
+!STACK 0
+org.eclipse.jface.resource.DataFormatException: For input string: "1x"
+	at org.eclipse.jface.resource.StringConverter.asRGB(StringConverter.java:568)
+	at org.eclipse.ui.themes.ColorUtil.getColorValue(ColorUtil.java:174)
+	at org.eclipse.ui.internal.themes.ColorDefinition.getValue(ColorDefinition.java:111)
+	at org.eclipse.ui.internal.themes.ThemeElementHelper.installColor(ThemeElementHelper.java:305)
+	at org.eclipse.ui.internal.themes.ThemeElementHelper.populateRegistry(ThemeElementHelper.java:193)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager.updateThemes(WorkbenchThemeManager.java:191)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager.access$2(WorkbenchThemeManager.java:185)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager$2.handleEvent(WorkbenchThemeManager.java:159)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4362)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4354)
+	at org.eclipse.swt.widgets.Display.runSettings(Display.java:4232)
+	at org.eclipse.swt.widgets.Display.messageProc(Display.java:3366)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2549)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3767)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:654)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:598)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+
+!ENTRY org.eclipse.ui 2 2 2015-09-07 15:55:38.791
+!MESSAGE Could not parse value for theme color badColor3
+!STACK 0
+org.eclipse.jface.resource.DataFormatException: For input string: "1x"
+	at org.eclipse.jface.resource.StringConverter.asRGB(StringConverter.java:568)
+	at org.eclipse.ui.themes.ColorUtil.getColorValue(ColorUtil.java:174)
+	at org.eclipse.ui.internal.themes.ColorDefinition.getValue(ColorDefinition.java:111)
+	at org.eclipse.ui.internal.themes.ThemeElementHelper.installColor(ThemeElementHelper.java:305)
+	at org.eclipse.ui.internal.themes.ThemeElementHelper.populateRegistry(ThemeElementHelper.java:193)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager.updateThemes(WorkbenchThemeManager.java:191)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager.access$2(WorkbenchThemeManager.java:185)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager$2.handleEvent(WorkbenchThemeManager.java:159)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4362)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4354)
+	at org.eclipse.swt.widgets.Display.runSettings(Display.java:4232)
+	at org.eclipse.swt.widgets.Display.messageProc(Display.java:3366)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2549)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3767)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:654)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:598)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+
+!ENTRY org.eclipse.ui 2 2 2015-09-08 17:15:00.181
+!MESSAGE Could not parse value for theme color badColor3
+!STACK 0
+org.eclipse.jface.resource.DataFormatException: For input string: "1x"
+	at org.eclipse.jface.resource.StringConverter.asRGB(StringConverter.java:568)
+	at org.eclipse.ui.themes.ColorUtil.getColorValue(ColorUtil.java:174)
+	at org.eclipse.ui.internal.themes.ColorDefinition.getValue(ColorDefinition.java:111)
+	at org.eclipse.ui.internal.themes.ThemeElementHelper.installColor(ThemeElementHelper.java:305)
+	at org.eclipse.ui.internal.themes.ThemeElementHelper.populateRegistry(ThemeElementHelper.java:193)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager.updateThemes(WorkbenchThemeManager.java:191)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager.access$2(WorkbenchThemeManager.java:185)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager$2.handleEvent(WorkbenchThemeManager.java:159)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4362)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4354)
+	at org.eclipse.swt.widgets.Display.runSettings(Display.java:4232)
+	at org.eclipse.swt.widgets.Display.messageProc(Display.java:3366)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2549)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3767)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:654)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:598)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+
+!ENTRY org.eclipse.ui 2 2 2015-09-08 17:15:09.368
+!MESSAGE Could not parse value for theme color badColor3
+!STACK 0
+org.eclipse.jface.resource.DataFormatException: For input string: "1x"
+	at org.eclipse.jface.resource.StringConverter.asRGB(StringConverter.java:568)
+	at org.eclipse.ui.themes.ColorUtil.getColorValue(ColorUtil.java:174)
+	at org.eclipse.ui.internal.themes.ColorDefinition.getValue(ColorDefinition.java:111)
+	at org.eclipse.ui.internal.themes.ThemeElementHelper.installColor(ThemeElementHelper.java:305)
+	at org.eclipse.ui.internal.themes.ThemeElementHelper.populateRegistry(ThemeElementHelper.java:193)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager.updateThemes(WorkbenchThemeManager.java:191)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager.access$2(WorkbenchThemeManager.java:185)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager$2.handleEvent(WorkbenchThemeManager.java:159)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4362)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4354)
+	at org.eclipse.swt.widgets.Display.runSettings(Display.java:4232)
+	at org.eclipse.swt.widgets.Display.messageProc(Display.java:3366)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2549)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3767)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:654)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:598)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+
+!ENTRY org.eclipse.ui 2 2 2015-09-09 16:19:07.306
+!MESSAGE Could not parse value for theme color badColor3
+!STACK 0
+org.eclipse.jface.resource.DataFormatException: For input string: "1x"
+	at org.eclipse.jface.resource.StringConverter.asRGB(StringConverter.java:568)
+	at org.eclipse.ui.themes.ColorUtil.getColorValue(ColorUtil.java:174)
+	at org.eclipse.ui.internal.themes.ColorDefinition.getValue(ColorDefinition.java:111)
+	at org.eclipse.ui.internal.themes.ThemeElementHelper.installColor(ThemeElementHelper.java:305)
+	at org.eclipse.ui.internal.themes.ThemeElementHelper.populateRegistry(ThemeElementHelper.java:193)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager.updateThemes(WorkbenchThemeManager.java:191)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager.access$2(WorkbenchThemeManager.java:185)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager$2.handleEvent(WorkbenchThemeManager.java:159)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4362)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4354)
+	at org.eclipse.swt.widgets.Display.runSettings(Display.java:4232)
+	at org.eclipse.swt.widgets.Display.messageProc(Display.java:3366)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2549)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3767)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:654)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:598)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+
+!ENTRY org.eclipse.ui 2 2 2015-09-09 16:19:24.932
+!MESSAGE Could not parse value for theme color badColor3
+!STACK 0
+org.eclipse.jface.resource.DataFormatException: For input string: "1x"
+	at org.eclipse.jface.resource.StringConverter.asRGB(StringConverter.java:568)
+	at org.eclipse.ui.themes.ColorUtil.getColorValue(ColorUtil.java:174)
+	at org.eclipse.ui.internal.themes.ColorDefinition.getValue(ColorDefinition.java:111)
+	at org.eclipse.ui.internal.themes.ThemeElementHelper.installColor(ThemeElementHelper.java:305)
+	at org.eclipse.ui.internal.themes.ThemeElementHelper.populateRegistry(ThemeElementHelper.java:193)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager.updateThemes(WorkbenchThemeManager.java:191)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager.access$2(WorkbenchThemeManager.java:185)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager$2.handleEvent(WorkbenchThemeManager.java:159)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4362)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4354)
+	at org.eclipse.swt.widgets.Display.runSettings(Display.java:4232)
+	at org.eclipse.swt.widgets.Display.messageProc(Display.java:3366)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2549)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3767)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:654)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:598)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+
+!ENTRY org.eclipse.ui 2 2 2015-09-10 03:29:37.272
+!MESSAGE Could not parse value for theme color badColor3
+!STACK 0
+org.eclipse.jface.resource.DataFormatException: For input string: "1x"
+	at org.eclipse.jface.resource.StringConverter.asRGB(StringConverter.java:568)
+	at org.eclipse.ui.themes.ColorUtil.getColorValue(ColorUtil.java:174)
+	at org.eclipse.ui.internal.themes.ColorDefinition.getValue(ColorDefinition.java:111)
+	at org.eclipse.ui.internal.themes.ThemeElementHelper.installColor(ThemeElementHelper.java:305)
+	at org.eclipse.ui.internal.themes.ThemeElementHelper.populateRegistry(ThemeElementHelper.java:193)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager.updateThemes(WorkbenchThemeManager.java:191)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager.access$2(WorkbenchThemeManager.java:185)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager$2.handleEvent(WorkbenchThemeManager.java:159)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4362)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4354)
+	at org.eclipse.swt.widgets.Display.runSettings(Display.java:4232)
+	at org.eclipse.swt.widgets.Display.messageProc(Display.java:3366)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2549)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3767)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:654)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:598)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+!SESSION 2015-09-24 20:51:24.146 -----------------------------------------------
+eclipse.buildId=4.5.0.I20150603-2000
+java.version=1.8.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_CA
+Framework arguments:  -product org.eclipse.epp.package.jee.product -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product -data G:\Programming\IDC4U -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.e4.ui.di 2 0 2015-09-24 20:51:25.236
+!MESSAGE [SCR] Found components with duplicated names! Details: 
+Component1 : Component[
+	name = org.eclipse.e4.ui.di.events
+	activate = activate
+	deactivate = deactivate
+	modified = 
+	configuration-policy = optional
+	factory = null
+	autoenable = true
+	immediate = false
+	implementation = org.eclipse.e4.ui.internal.di.UIEventObjectSupplier
+	state = Unsatisfied
+	properties = {dependency.injection.annotation=org.eclipse.e4.ui.di.UIEventTopic}
+	serviceFactory = false
+	serviceInterface = [org.eclipse.e4.core.di.suppliers.ExtendedObjectSupplier]
+	references = null
+	located in bundle = org.eclipse.e4.ui.di_1.0.0.v20140328-2112 [1443]
+]
+Component2: Component[
+	name = org.eclipse.e4.ui.di.events
+	activate = activate
+	deactivate = deactivate
+	modified = 
+	configuration-policy = optional
+	factory = null
+	autoenable = true
+	immediate = false
+	implementation = org.eclipse.e4.ui.internal.di.UIEventObjectSupplier
+	state = Unsatisfied
+	properties = {dependency.injection.annotation=org.eclipse.e4.ui.di.UIEventTopic}
+	serviceFactory = false
+	serviceInterface = [org.eclipse.e4.core.di.suppliers.ExtendedObjectSupplier]
+	references = null
+	located in bundle = org.eclipse.e4.ui.di_1.1.0.v20150422-0725 [790]
+]  
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2015-09-24 20:51:25.242
+!MESSAGE [SCR] Found components with duplicated names! Details: 
+Component1 : Component[
+	name = org.eclipse.equinox.p2.transport.ecf
+	activate = activate
+	deactivate = deactivate
+	modified = 
+	configuration-policy = optional
+	factory = null
+	autoenable = true
+	immediate = false
+	implementation = org.eclipse.equinox.internal.p2.transport.ecf.ECFTransportComponent
+	state = Unsatisfied
+	properties = {p2.agent.servicename=org.eclipse.equinox.internal.p2.repository.Transport}
+	serviceFactory = false
+	serviceInterface = [org.eclipse.equinox.p2.core.spi.IAgentServiceFactory]
+	references = null
+	located in bundle = org.eclipse.equinox.p2.transport.ecf_1.1.0.v20140408-1354 [1488]
+]
+Component2: Component[
+	name = org.eclipse.equinox.p2.transport.ecf
+	activate = activate
+	deactivate = deactivate
+	modified = 
+	configuration-policy = optional
+	factory = null
+	autoenable = true
+	immediate = false
+	implementation = org.eclipse.equinox.internal.p2.transport.ecf.ECFTransportComponent
+	state = Unsatisfied
+	properties = {p2.agent.servicename=org.eclipse.equinox.internal.p2.repository.Transport}
+	serviceFactory = false
+	serviceInterface = [org.eclipse.equinox.p2.core.spi.IAgentServiceFactory]
+	references = null
+	located in bundle = org.eclipse.equinox.p2.transport.ecf_1.1.100.v20150521-1342 [880]
+]  
+
+!ENTRY org.eclipse.core.resources 2 10035 2015-09-24 20:51:26.101
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.ui 2 0 2015-09-24 20:51:26.770
+!MESSAGE Warnings while parsing the key bindings from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.bindings' extension point
+!SUBENTRY 1 org.eclipse.ui 2 0 2015-09-24 20:51:26.770
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.ui.tests', id='org.eclipse.ui.tests.TestCommandId'
+!SUBENTRY 1 org.eclipse.ui 2 0 2015-09-24 20:51:26.770
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.ui.tests', id='org.eclipse.ui.tests.TestCommandId'
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2015-09-24 20:51:26.810
+!MESSAGE Could not find element with id 'app.base'
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2015-09-24 20:51:26.814
+!MESSAGE Could not find element with id 'app.base.command'
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2015-09-24 20:51:26.860
+!MESSAGE Could not find element with id 'app.base'
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2015-09-24 20:51:26.864
+!MESSAGE Could not find element with id 'app.base.command'
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2015-09-24 20:51:26.869
+!MESSAGE Could not find element with id 'fragment.contributedWindow'
+
+!ENTRY org.eclipse.ui 4 4 2015-09-24 20:51:27.008
+!MESSAGE Invalid activity: missing a translatable name (contributed by 'org.eclipse.ui.tests')
+
+!ENTRY org.eclipse.ui 4 4 2015-09-24 20:51:27.013
+!MESSAGE Invalid activity: missing a unique identifier (contributed by 'org.eclipse.ui.tests')
+
+!ENTRY org.eclipse.ui 4 4 2015-09-24 20:51:27.016
+!MESSAGE Invalid category description: missing a translatable name (contributed by 'org.eclipse.ui.tests')
+
+!ENTRY org.eclipse.ui 4 4 2015-09-24 20:51:27.018
+!MESSAGE Invalid category description: has no ID (contributed by 'org.eclipse.ui.tests')
+
+!ENTRY org.eclipse.ui 4 4 2015-09-24 20:51:27.022
+!MESSAGE Invalid activity pattern binding: missing the pattern to be bound (contributed by 'org.eclipse.ui.tests')
+
+!ENTRY org.eclipse.ui 4 4 2015-09-24 20:51:27.024
+!MESSAGE Invalid activity requirement binding: missing ID of the required activity (contributed by 'org.eclipse.ui.tests')
+
+!ENTRY org.eclipse.ui 4 4 2015-09-24 20:51:27.026
+!MESSAGE Invalid category activity binding: missing the ID of the activity to bind (contributed by 'org.eclipse.ui.tests')
+
+!ENTRY org.eclipse.ui 2 0 2015-09-24 20:51:27.041
+!MESSAGE Expression activity cannot have requirements (id: org.eclipse.ui.tests.filter4.enabled)
+
+!ENTRY org.eclipse.ui 2 0 2015-09-24 20:51:27.043
+!MESSAGE Expression activity cannot be required (id: org.eclipse.ui.tests.filter7.enabled)
+
+!ENTRY org.eclipse.ui 2 2 2015-09-24 20:51:27.638
+!MESSAGE Could not parse value for theme color badColor3
+!STACK 0
+org.eclipse.jface.resource.DataFormatException: For input string: "1x"
+	at org.eclipse.jface.resource.StringConverter.asRGB(StringConverter.java:568)
+	at org.eclipse.ui.themes.ColorUtil.getColorValue(ColorUtil.java:174)
+	at org.eclipse.ui.internal.themes.ColorDefinition.getValue(ColorDefinition.java:111)
+	at org.eclipse.ui.internal.themes.ThemeElementHelper.installColor(ThemeElementHelper.java:305)
+	at org.eclipse.ui.internal.themes.ThemeElementHelper.populateRegistry(ThemeElementHelper.java:193)
+	at org.eclipse.ui.internal.Workbench$28.runWithException(Workbench.java:1748)
+	at org.eclipse.ui.internal.StartupThreading$StartupRunnable.run(StartupThreading.java:32)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4155)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3772)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2949)
+	at org.eclipse.ui.internal.Workbench.access$8(Workbench.java:2854)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:651)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:598)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-09-24 20:51:33.879
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-09-24 20:51:33.952
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Dave Yognaught'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.ui 2 0 2015-09-24 20:51:34.331
+!MESSAGE The 'org.eclipse.ui.startup' extension from 'org.eclipse.ui.tests' does not provide a 'class' attribute.
+This usage is deprecated and a 'class' attribute should be provided.
+The release after Mars (4.5) will no longer support the deprecated usage!
+
+!ENTRY org.eclipse.jface 2 0 2015-09-24 20:51:52.484
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2015-09-24 20:51:52.484
+!MESSAGE A conflict occurred for CTRL+5 K:
+Binding(CTRL+5 K,
+	ParameterizedCommand(Command(org.eclipse.ui.tests.keyModel.conflict1,Conflict1,
+		,
+		Category(org.eclipse.ui.tests.category.keyModel,Key Model,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@2956985b,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.dialog,,,system)
+Binding(CTRL+5 K,
+	ParameterizedCommand(Command(org.eclipse.ui.tests.keyModel.conflict2,Conflict2,
+		,
+		Category(org.eclipse.ui.tests.category.keyModel,Key Model,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@2ef4e7f3,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.dialog,,,system)
+Binding(CTRL+5 K,
+	ParameterizedCommand(Command(org.eclipse.ui.tests.keyModel.conflict3,Conflict3,
+		,
+		Category(org.eclipse.ui.tests.category.keyModel,Key Model,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@168b28ef,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.dialog,,,system)
+
+!ENTRY org.eclipse.ui 2 2 2015-09-26 16:10:17.145
+!MESSAGE Could not parse value for theme color badColor3
+!STACK 0
+org.eclipse.jface.resource.DataFormatException: For input string: "1x"
+	at org.eclipse.jface.resource.StringConverter.asRGB(StringConverter.java:568)
+	at org.eclipse.ui.themes.ColorUtil.getColorValue(ColorUtil.java:174)
+	at org.eclipse.ui.internal.themes.ColorDefinition.getValue(ColorDefinition.java:111)
+	at org.eclipse.ui.internal.themes.ThemeElementHelper.installColor(ThemeElementHelper.java:305)
+	at org.eclipse.ui.internal.themes.ThemeElementHelper.populateRegistry(ThemeElementHelper.java:193)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager.updateThemes(WorkbenchThemeManager.java:191)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager.access$2(WorkbenchThemeManager.java:185)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager$2.handleEvent(WorkbenchThemeManager.java:159)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4362)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4354)
+	at org.eclipse.swt.widgets.Display.runSettings(Display.java:4232)
+	at org.eclipse.swt.widgets.Display.messageProc(Display.java:3366)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2549)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3767)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:654)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:598)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+
+!ENTRY org.eclipse.ui 2 2 2015-09-26 16:10:27.806
+!MESSAGE Could not parse value for theme color badColor3
+!STACK 0
+org.eclipse.jface.resource.DataFormatException: For input string: "1x"
+	at org.eclipse.jface.resource.StringConverter.asRGB(StringConverter.java:568)
+	at org.eclipse.ui.themes.ColorUtil.getColorValue(ColorUtil.java:174)
+	at org.eclipse.ui.internal.themes.ColorDefinition.getValue(ColorDefinition.java:111)
+	at org.eclipse.ui.internal.themes.ThemeElementHelper.installColor(ThemeElementHelper.java:305)
+	at org.eclipse.ui.internal.themes.ThemeElementHelper.populateRegistry(ThemeElementHelper.java:193)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager.updateThemes(WorkbenchThemeManager.java:191)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager.access$2(WorkbenchThemeManager.java:185)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager$2.handleEvent(WorkbenchThemeManager.java:159)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4362)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4354)
+	at org.eclipse.swt.widgets.Display.runSettings(Display.java:4232)
+	at org.eclipse.swt.widgets.Display.messageProc(Display.java:3366)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2549)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3767)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:654)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:598)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+
+!ENTRY org.eclipse.ui 2 2 2015-09-26 21:05:22.474
+!MESSAGE Invalid property category path: Test Category (bundle: org.eclipse.ui.tests, propertyPage: org.eclipse.ui.tests.and)
+
+!ENTRY org.eclipse.ui 2 2 2015-09-26 21:05:22.526
+!MESSAGE Invalid property category path: Test Category (bundle: org.eclipse.ui.tests, propertyPage: org.eclipse.ui.tests.or)
+!SESSION 2015-09-27 11:59:38.074 -----------------------------------------------
+eclipse.buildId=4.5.0.I20150603-2000
+java.version=1.8.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_CA
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.e4.ui.di 2 0 2015-09-27 12:00:00.783
+!MESSAGE [SCR] Found components with duplicated names! Details: 
+Component1 : Component[
+	name = org.eclipse.e4.ui.di.events
+	activate = activate
+	deactivate = deactivate
+	modified = 
+	configuration-policy = optional
+	factory = null
+	autoenable = true
+	immediate = false
+	implementation = org.eclipse.e4.ui.internal.di.UIEventObjectSupplier
+	state = Unsatisfied
+	properties = {dependency.injection.annotation=org.eclipse.e4.ui.di.UIEventTopic}
+	serviceFactory = false
+	serviceInterface = [org.eclipse.e4.core.di.suppliers.ExtendedObjectSupplier]
+	references = null
+	located in bundle = org.eclipse.e4.ui.di_1.0.0.v20140328-2112 [1443]
+]
+Component2: Component[
+	name = org.eclipse.e4.ui.di.events
+	activate = activate
+	deactivate = deactivate
+	modified = 
+	configuration-policy = optional
+	factory = null
+	autoenable = true
+	immediate = false
+	implementation = org.eclipse.e4.ui.internal.di.UIEventObjectSupplier
+	state = Unsatisfied
+	properties = {dependency.injection.annotation=org.eclipse.e4.ui.di.UIEventTopic}
+	serviceFactory = false
+	serviceInterface = [org.eclipse.e4.core.di.suppliers.ExtendedObjectSupplier]
+	references = null
+	located in bundle = org.eclipse.e4.ui.di_1.1.0.v20150422-0725 [790]
+]  
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2015-09-27 12:00:00.788
+!MESSAGE [SCR] Found components with duplicated names! Details: 
+Component1 : Component[
+	name = org.eclipse.equinox.p2.transport.ecf
+	activate = activate
+	deactivate = deactivate
+	modified = 
+	configuration-policy = optional
+	factory = null
+	autoenable = true
+	immediate = false
+	implementation = org.eclipse.equinox.internal.p2.transport.ecf.ECFTransportComponent
+	state = Unsatisfied
+	properties = {p2.agent.servicename=org.eclipse.equinox.internal.p2.repository.Transport}
+	serviceFactory = false
+	serviceInterface = [org.eclipse.equinox.p2.core.spi.IAgentServiceFactory]
+	references = null
+	located in bundle = org.eclipse.equinox.p2.transport.ecf_1.1.0.v20140408-1354 [1488]
+]
+Component2: Component[
+	name = org.eclipse.equinox.p2.transport.ecf
+	activate = activate
+	deactivate = deactivate
+	modified = 
+	configuration-policy = optional
+	factory = null
+	autoenable = true
+	immediate = false
+	implementation = org.eclipse.equinox.internal.p2.transport.ecf.ECFTransportComponent
+	state = Unsatisfied
+	properties = {p2.agent.servicename=org.eclipse.equinox.internal.p2.repository.Transport}
+	serviceFactory = false
+	serviceInterface = [org.eclipse.equinox.p2.core.spi.IAgentServiceFactory]
+	references = null
+	located in bundle = org.eclipse.equinox.p2.transport.ecf_1.1.100.v20150521-1342 [880]
+]  
+
+!ENTRY org.eclipse.ui 2 0 2015-09-27 12:00:06.322
+!MESSAGE Warnings while parsing the key bindings from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.bindings' extension point
+!SUBENTRY 1 org.eclipse.ui 2 0 2015-09-27 12:00:06.322
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.ui.tests', id='org.eclipse.ui.tests.TestCommandId'
+!SUBENTRY 1 org.eclipse.ui 2 0 2015-09-27 12:00:06.322
+!MESSAGE Cannot bind to an undefined command: plug-in='org.eclipse.ui.tests', id='org.eclipse.ui.tests.TestCommandId'
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2015-09-27 12:00:06.395
+!MESSAGE Could not find element with id 'app.base'
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2015-09-27 12:00:06.401
+!MESSAGE Could not find element with id 'app.base.command'
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2015-09-27 12:00:06.552
+!MESSAGE Could not find element with id 'app.base'
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2015-09-27 12:00:06.570
+!MESSAGE Could not find element with id 'app.base.command'
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2015-09-27 12:00:06.579
+!MESSAGE Could not find element with id 'fragment.contributedWindow'
+
+!ENTRY org.eclipse.ui 4 4 2015-09-27 12:00:07.023
+!MESSAGE Invalid activity: missing a translatable name (contributed by 'org.eclipse.ui.tests')
+
+!ENTRY org.eclipse.ui 4 4 2015-09-27 12:00:07.027
+!MESSAGE Invalid activity: missing a unique identifier (contributed by 'org.eclipse.ui.tests')
+
+!ENTRY org.eclipse.ui 4 4 2015-09-27 12:00:07.031
+!MESSAGE Invalid category description: missing a translatable name (contributed by 'org.eclipse.ui.tests')
+
+!ENTRY org.eclipse.ui 4 4 2015-09-27 12:00:07.033
+!MESSAGE Invalid category description: has no ID (contributed by 'org.eclipse.ui.tests')
+
+!ENTRY org.eclipse.ui 4 4 2015-09-27 12:00:07.035
+!MESSAGE Invalid activity pattern binding: missing the pattern to be bound (contributed by 'org.eclipse.ui.tests')
+
+!ENTRY org.eclipse.ui 4 4 2015-09-27 12:00:07.037
+!MESSAGE Invalid activity requirement binding: missing ID of the required activity (contributed by 'org.eclipse.ui.tests')
+
+!ENTRY org.eclipse.ui 4 4 2015-09-27 12:00:07.039
+!MESSAGE Invalid category activity binding: missing the ID of the activity to bind (contributed by 'org.eclipse.ui.tests')
+
+!ENTRY org.eclipse.ui 2 0 2015-09-27 12:00:07.052
+!MESSAGE Expression activity cannot have requirements (id: org.eclipse.ui.tests.filter4.enabled)
+
+!ENTRY org.eclipse.ui 2 0 2015-09-27 12:00:07.055
+!MESSAGE Expression activity cannot be required (id: org.eclipse.ui.tests.filter7.enabled)
+
+!ENTRY org.eclipse.ui 2 2 2015-09-27 12:00:09.289
+!MESSAGE Could not parse value for theme color badColor3
+!STACK 0
+org.eclipse.jface.resource.DataFormatException: For input string: "1x"
+	at org.eclipse.jface.resource.StringConverter.asRGB(StringConverter.java:568)
+	at org.eclipse.ui.themes.ColorUtil.getColorValue(ColorUtil.java:174)
+	at org.eclipse.ui.internal.themes.ColorDefinition.getValue(ColorDefinition.java:111)
+	at org.eclipse.ui.internal.themes.ThemeElementHelper.installColor(ThemeElementHelper.java:305)
+	at org.eclipse.ui.internal.themes.ThemeElementHelper.populateRegistry(ThemeElementHelper.java:193)
+	at org.eclipse.ui.internal.Workbench$28.runWithException(Workbench.java:1748)
+	at org.eclipse.ui.internal.StartupThreading$StartupRunnable.run(StartupThreading.java:32)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4155)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3772)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2949)
+	at org.eclipse.ui.internal.Workbench.access$8(Workbench.java:2854)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:651)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:598)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-09-27 12:00:18.861
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-09-27 12:00:18.863
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Dave Yognaught'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.ui 2 0 2015-09-27 12:00:19.539
+!MESSAGE The 'org.eclipse.ui.startup' extension from 'org.eclipse.ui.tests' does not provide a 'class' attribute.
+This usage is deprecated and a 'class' attribute should be provided.
+The release after Mars (4.5) will no longer support the deprecated usage!
+
+!ENTRY org.eclipse.jface 2 0 2015-09-27 12:05:55.157
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2015-09-27 12:05:55.157
+!MESSAGE A conflict occurred for CTRL+5 K:
+Binding(CTRL+5 K,
+	ParameterizedCommand(Command(org.eclipse.ui.tests.keyModel.conflict1,Conflict1,
+		,
+		Category(org.eclipse.ui.tests.category.keyModel,Key Model,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@7590b28f,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.dialog,,,system)
+Binding(CTRL+5 K,
+	ParameterizedCommand(Command(org.eclipse.ui.tests.keyModel.conflict2,Conflict2,
+		,
+		Category(org.eclipse.ui.tests.category.keyModel,Key Model,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6cb0ab1e,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.dialog,,,system)
+Binding(CTRL+5 K,
+	ParameterizedCommand(Command(org.eclipse.ui.tests.keyModel.conflict3,Conflict3,
+		,
+		Category(org.eclipse.ui.tests.category.keyModel,Key Model,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6bb500fa,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.dialog,,,system)
+
+!ENTRY org.eclipse.ui 2 2 2015-09-27 14:53:13.109
+!MESSAGE Could not parse value for theme color badColor3
+!STACK 0
+org.eclipse.jface.resource.DataFormatException: For input string: "1x"
+	at org.eclipse.jface.resource.StringConverter.asRGB(StringConverter.java:568)
+	at org.eclipse.ui.themes.ColorUtil.getColorValue(ColorUtil.java:174)
+	at org.eclipse.ui.internal.themes.ColorDefinition.getValue(ColorDefinition.java:111)
+	at org.eclipse.ui.internal.themes.ThemeElementHelper.installColor(ThemeElementHelper.java:305)
+	at org.eclipse.ui.internal.themes.ThemeElementHelper.populateRegistry(ThemeElementHelper.java:193)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager.updateThemes(WorkbenchThemeManager.java:191)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager.access$2(WorkbenchThemeManager.java:185)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager$2.handleEvent(WorkbenchThemeManager.java:159)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4362)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4354)
+	at org.eclipse.swt.widgets.Display.runSettings(Display.java:4232)
+	at org.eclipse.swt.widgets.Display.messageProc(Display.java:3366)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2549)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3767)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:654)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:598)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+
+!ENTRY org.eclipse.ui 2 2 2015-09-27 14:53:28.751
+!MESSAGE Could not parse value for theme color badColor3
+!STACK 0
+org.eclipse.jface.resource.DataFormatException: For input string: "1x"
+	at org.eclipse.jface.resource.StringConverter.asRGB(StringConverter.java:568)
+	at org.eclipse.ui.themes.ColorUtil.getColorValue(ColorUtil.java:174)
+	at org.eclipse.ui.internal.themes.ColorDefinition.getValue(ColorDefinition.java:111)
+	at org.eclipse.ui.internal.themes.ThemeElementHelper.installColor(ThemeElementHelper.java:305)
+	at org.eclipse.ui.internal.themes.ThemeElementHelper.populateRegistry(ThemeElementHelper.java:193)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager.updateThemes(WorkbenchThemeManager.java:191)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager.access$2(WorkbenchThemeManager.java:185)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager$2.handleEvent(WorkbenchThemeManager.java:159)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4362)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4354)
+	at org.eclipse.swt.widgets.Display.runSettings(Display.java:4232)
+	at org.eclipse.swt.widgets.Display.messageProc(Display.java:3366)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2549)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3767)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:654)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:598)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+
+!ENTRY org.eclipse.ui 2 2 2015-09-27 20:05:33.278
+!MESSAGE Could not parse value for theme color badColor3
+!STACK 0
+org.eclipse.jface.resource.DataFormatException: For input string: "1x"
+	at org.eclipse.jface.resource.StringConverter.asRGB(StringConverter.java:568)
+	at org.eclipse.ui.themes.ColorUtil.getColorValue(ColorUtil.java:174)
+	at org.eclipse.ui.internal.themes.ColorDefinition.getValue(ColorDefinition.java:111)
+	at org.eclipse.ui.internal.themes.ThemeElementHelper.installColor(ThemeElementHelper.java:305)
+	at org.eclipse.ui.internal.themes.ThemeElementHelper.populateRegistry(ThemeElementHelper.java:193)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager.updateThemes(WorkbenchThemeManager.java:191)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager.access$2(WorkbenchThemeManager.java:185)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager$2.handleEvent(WorkbenchThemeManager.java:159)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4362)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4354)
+	at org.eclipse.swt.widgets.Display.runSettings(Display.java:4232)
+	at org.eclipse.swt.widgets.Display.messageProc(Display.java:3366)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2549)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3767)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:654)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:598)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+
+!ENTRY org.eclipse.ui 2 2 2015-09-27 20:06:03.560
+!MESSAGE Could not parse value for theme color badColor3
+!STACK 0
+org.eclipse.jface.resource.DataFormatException: For input string: "1x"
+	at org.eclipse.jface.resource.StringConverter.asRGB(StringConverter.java:568)
+	at org.eclipse.ui.themes.ColorUtil.getColorValue(ColorUtil.java:174)
+	at org.eclipse.ui.internal.themes.ColorDefinition.getValue(ColorDefinition.java:111)
+	at org.eclipse.ui.internal.themes.ThemeElementHelper.installColor(ThemeElementHelper.java:305)
+	at org.eclipse.ui.internal.themes.ThemeElementHelper.populateRegistry(ThemeElementHelper.java:193)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager.updateThemes(WorkbenchThemeManager.java:191)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager.access$2(WorkbenchThemeManager.java:185)
+	at org.eclipse.ui.internal.themes.WorkbenchThemeManager$2.handleEvent(WorkbenchThemeManager.java:159)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4362)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4354)
+	at org.eclipse.swt.widgets.Display.runSettings(Display.java:4232)
+	at org.eclipse.swt.widgets.Display.messageProc(Display.java:3366)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2549)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3767)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:654)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:598)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+
+!ENTRY org.eclipse.ui 2 2 2015-09-27 20:42:22.738
+!MESSAGE Invalid property category path: Test Category (bundle: org.eclipse.ui.tests, propertyPage: org.eclipse.ui.tests.and)
+
+!ENTRY org.eclipse.ui 2 2 2015-09-27 20:42:22.753
+!MESSAGE Invalid property category path: Test Category (bundle: org.eclipse.ui.tests, propertyPage: org.eclipse.ui.tests.or)

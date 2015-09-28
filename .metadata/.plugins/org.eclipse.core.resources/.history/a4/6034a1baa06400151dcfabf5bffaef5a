@@ -1,0 +1,7 @@
+package game.input;
+
+public class Input {
+
+	public static float scale = 0.25f;
+
+}
